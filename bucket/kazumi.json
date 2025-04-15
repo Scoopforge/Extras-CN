@@ -1,0 +1,29 @@
+{
+    "version": "1.6.6",
+    "description": "Video player based on MPlayer/mplayer2 (builds by shinchiro)",
+    "homepage": "https://github.com/Predidit/Kazumi/releases/tag/1.6.6",
+    "license": "LGPL-2.1-or-later,GPL-2.0-or-later",
+    "notes": [
+        "To set and unset file type associations and AutoPlay handlers, run '$dir\\installer\\mpv-install.bat' and '$dir\\installer\\mpv-uninstall.bat' as administrator, respectively.",
+        "You can use Icaros ('nonportable/icaros-np') to enable thumbnails for all media types."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Predidit/Kazumi/releases/download/1.6.6/Kazumi_windows_1.6.6.zip",
+            "hash": "sha256:dc569513f0700e5d173aeecaf56dedf8a255ec99ef6c6c9f8a20a0db6d605fa9"
+        }
+    },
+    "shortcuts": [
+        [
+            "kazumi.exe",
+            "kazumi"
+        ]
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Predidit/Kazumi/releases/download/1.6.6/Kazumi_windows_-$version-git-$matchCommit.zip"
+            }
+        }
+    }
+}
