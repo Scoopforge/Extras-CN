@@ -1,1 +1,35 @@
-https://github.com/appdev/siyuan-unlock/releases/download/v3.3.6/siyuan-unlock-v3.3.6-win.exe
+{
+    "version": "3.3.6",
+    "description": "Siyuan Unlock Tool - 思源笔记解锁工具",
+    "homepage": "https://github.com/appdev/siyuan-unlock/releases",
+    "license": {
+        "identifier": "Unknown"
+    },
+    "depends": "7zip",
+    "url": "https://github.com/appdev/siyuan-unlock/releases/download/v3.3.6/siyuan-unlock-v3.3.6-win.exe#/dl.7z",
+    "hash": "d49a7860f76888d8dce3d3a813c7adef5ee5f5127a271797517771f137f0427b",
+    "pre_install": [
+        "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\siyuan-unlock\"",
+        "Remove-Item -R -Path $dir\\resources -ErrorAction SilentlyContinue",
+        "Move-Item $dir\\`$PLUGINSDIR\\siyuan-unlock\\* $dir -force -ErrorAction SilentlyContinue",
+        "Remove-Item -R -Path $dir\\`$PLUGINSDIR -ErrorAction SilentlyContinue",
+        "Remove-Item -Path \"$dir\\resources\\pandoc.zip\" -ErrorAction SilentlyContinue",
+        "Remove-Item -Path \"$dir\\resources\\changelogs\" -ErrorAction SilentlyContinue",
+        "Remove-Item -Path \"$dir\\resources\\guide\" -ErrorAction SilentlyContinue",
+        "Get-ChildItem \"$dir\\locales\" -Exclude \"zh-CN.pak\" | Remove-Item -Force -ErrorAction SilentlyContinue"
+    ],
+    "bin": "siyuan.exe",
+    "shortcuts": [
+        [
+            "siyuan.exe",
+            "Siyuan"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/appdev/siyuan-unlock/releases",
+        "regex": "/releases/tag/v(?<version>[\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/appdev/siyuan-unlock/releases/download/v$version/siyuan-unlock-v$version-win.exe#/dl.7z"
+    }
+}
