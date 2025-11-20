@@ -192,6 +192,7 @@ scoop config aria2-min-split-size 4M
 |     LibreOffice-cn      |    ✓     |
 |         LyX-cn          |    ✓     |
 |      Miniforge-cn       |    ✓     |
+|        MSYS2-cn         |    ✓     |
 | Navicat-Premium-Lite-cn |    ✓     |
 |      OBS-Studio-cn      |    ✓     |
 |        Octave-cn        |    ✓     |
