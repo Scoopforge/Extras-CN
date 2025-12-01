@@ -21,6 +21,9 @@
             "BaiduPCS-Go"
         ]
     ],
+    "bin": [
+        "BaiduPCS-Go.exe"
+    ],
     "persist": [
         "config",
         "Downloads"
