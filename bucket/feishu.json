@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://lf3-ug-sign.feishucdn.com/ee-appcenter/d62b19a8/Feishu-win32_x64-7.56.5-signed.exe#/dl.7z",
+            "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/d62b19a8/Feishu-win32_x64-7.56.5-signed.exe#/dl.7z",
             "hash": "md5:ea6e478ca9f8a1ce5c7cc9c29656bced"
         },
         "32bit": {
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://lf6-ug-sign.feishucdn.com/ee-appcenter/$matchId/Feishu-win32_x64-$version-signed.exe#/dl.7z"
+                "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/$matchId/Feishu-win32_x64-$version-signed.exe#/dl.7z"
             },
             "32bit": {
                 "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/$matchId/Feishu-win32_ia32-$version-signed.exe#/dl.7z"
