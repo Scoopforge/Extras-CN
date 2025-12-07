@@ -1,39 +1,57 @@
 {
-    "version": "3.19.0",
-    "description": "夸克网盘 电脑高效拍档 一键存爽快看",
+    "version": "3.23.2",
+    "description": "夸克网盘",
     "homepage": "https://pan.quark.cn/",
-    "license": {
-        "identifier": "Proprietary",
-        "url": "https://broccoli.uc.cn/apps/quark_icloud_pay/routes/service_help"
-    },
-    "url": "https://pdds.quark.cn/download/stfile/yy647988yyz4y282d/QuarkCloudDrive_v3.19.0_release_(Build2135883-20250328111434).exe",
-    "hash": "9aab6c9d22d5b555b5e2eb4c2516ba58c679a78c59d8b754e993605d7fd2f2eb",
+    "license": "Proprietary",
+    "url": "https://pdds.quark.cn/download/stfile/yy65y8z68yz4y282i/QuarkCloudDrive_v3.23.2_release_(Build2384776-20250822102933).exe",
+    "hash": "4c04168ec7b259b16fadf99daae1af61f938e28d85e52ac567328d481c234776",
     "innosetup": true,
-    "extract_dir": "app-3.19.0",
     "shortcuts": [
         [
             "QuarkCloudDrive.exe",
-            "夸克网盘"
+            "QuarkCloudDrive"
         ]
     ],
-    "post_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "New-PersistDirectory \"$env:APPDATA\\quark-cloud-drive\" \"$persist_dir\\AppData\" -Migrate"
+    "pre_install": [
+        "Move-Item -Force -Path \"$dir\\app-$version\\*\" -Destination \"$dir\"",
+        "Remove-Item -Force -Recurse -Path \"$dir\\app-$version\""
     ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\quark-cloud-drive\""
-    ],
+    "installer": {
+        "script": [
+            "Ensure \"$persist_dir\" | Out-Null",
+            "$quarkData1 = \"$env:APPDATA\\quark-cloud-drive\"",
+            "$quarkData2 = \"$env:APPDATA\\Quark\"",
+            "foreach ($path in @($quarkData1, $quarkData2)) {",
+            "    if (Test-Path $path) {",
+            "        $linkType = (Get-Item -Path $path -ErrorAction SilentlyContinue).LinkType",
+            "        if ($linkType -eq 'Junction') {",
+            "            Remove-Item -Path $path -Force",
+            "        } else {",
+            "            Get-ChildItem -Path $path -Force | Move-Item -Destination \"$persist_dir\\$(Split-Path $path -Leaf)\" -Force",
+            "            Remove-Item -Path $path -Force -Recurse",
+            "        }",
+            "    }",
+            "    $targetPersist = \"$persist_dir\\$(Split-Path $path -Leaf)\"",
+            "    if (!(Test-Path $targetPersist)) {",
+            "        New-Item -ItemType Directory -Path $targetPersist -Force | Out-Null",
+            "    }",
+            "    New-Item -Path $path -ItemType Junction -Target $targetPersist | Out-Null",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$env:APPDATA\\quark-cloud-drive\" -Recurse -Force -ErrorAction SilentlyContinue",
+            "Remove-Item \"$env:APPDATA\\Quark\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
+    },
     "checkver": {
         "url": "https://pan.quark.cn/api/client_version",
-        "jsonpath": "$.data.clouddrive_backup_packages[0].winInstallerUrl",
-        "regex": "pdds.quark.cn/download/stfile/(?<release>\\w+)/QuarkCloudDrive_v(?<version>[\\d.]+)_release_\\(Build(?<build>\\d+)-(?<timestamp>\\d+)\\).exe",
+        "jsonpath": "$.data.clouddrive_backup_packages[1].winInstallerUrl",
+        "re": "pdds.quark.cn/download/stfile/(?<release>\\w+)/QuarkCloudDrive_v(?<version>[\\d.]+)_release_\\(Build(?<build>\\d+)-(?<timestamp>\\d+)\\).exe",
         "replace": "${version}"
     },
     "autoupdate": {
-        "url": "https://pdds.quark.cn/download/stfile/$matchRelease/QuarkCloudDrive_v$matchVersion_release_(Build$matchBuild-$matchTimestamp).exe",
-        "extract_dir": "app-$version"
+        "url": "https://pdds.quark.cn/download/stfile/$matchRelease/QuarkCloudDrive_v$matchVersion_release_(Build$matchBuild-$matchTimestamp).exe"
     }
 }
