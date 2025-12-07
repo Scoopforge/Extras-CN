@@ -17,7 +17,7 @@
 scoop bucket add extras-cn https://github.com/Scoopforge/Extras-CN
 ```
 
-# 🏃 开始
+## 🏃 开始
 
 ## 🚲 安装 Scoop
 
@@ -149,6 +149,7 @@ scoop config aria2-min-split-size 4M
 |   网易云音乐    |                           [neteasemusic](https://music.163.com)                           |    ✓     |                                                      |
 |    腾讯会议     |                      [tencent-meeting](https://meeting.tencent.com)                       |    ✓     |                    by @Ryanjiena                     |
 |       TIM       |                                 [tim](https://tim.qq.com)                                 |    ✓     |                                                      |
+| QQ 音乐 |             [qqmusic](hhttps://y.qq.com/)              |    ✓     |                                                      |
 |     uTools      |                                 [utools](https://u.tools)                                 |    ✓     |                                                      |
 |     小狼毫      |                                 [weasel](https://rime.im)                                 |    ✓     |                                                      |
 |    WPSOffice    |                          [wpsoffice-cn](https://wps.com/zh-hant)                          |    ✓     |                                                      |
