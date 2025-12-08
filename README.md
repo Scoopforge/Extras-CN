@@ -11,13 +11,13 @@
 >
 > ⚠️ For a better management, this repo now only contains manifests of softwares for Chinese users, for international softwares, please add the bucket [Extras-Plus](https://github.com/Scoopforge/Extras-Plus).
 
+## 🏃 开始
+
 对于熟悉 Scoop 的用户：
 
 ```powershell
 scoop bucket add extras-cn https://github.com/Scoopforge/Extras-CN
 ```
-
-## 🏃 开始
 
 ## 🚲 安装 Scoop
 
