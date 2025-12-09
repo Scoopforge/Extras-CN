@@ -161,7 +161,8 @@ scoop config aria2-min-split-size 4M
 |  Fishing-Funds  |                  [fishing-funds](https://github.com/1zilc/fishing-funds)                  |    ✓     |                                                      |
 |    HBuilderX    |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |                                                      |
 | 微信小程序 SDK  | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |                                                      |
-|     WeGame      |                           [wegame](https://www.wegame.com.cn/)                            |    ✓     |                                                      |
+|     WeGame      |                            [wegame](https://www.wegame.com.cn)                            |    ✓     |                                                      |
+|     网易UU      |                              [neteaseuu](https://uu.163.com)                              |    ✓     |                                                      |
 | M3u8-Downloader |             [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader)              |    ✓     |                                                      |
 
 ### Win 专属
