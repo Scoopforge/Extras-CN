@@ -1,4 +1,4 @@
 if (!$env:SCOOP_HOME) { $env:SCOOP_HOME = Convert-Path (scoop prefix scoop) }
-$checkver = "$env:SCOOP_HOME/bin/checkver.ps1"
+$checkhashes = "$env:SCOOP_HOME/bin/checkhashes.ps1"
 $dir = "$PSScriptRoot/../bucket"
-& $checkver -Dir $dir @Args
+& $checkhashes -Dir $dir @Args
