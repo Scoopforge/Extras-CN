@@ -130,39 +130,45 @@ scoop config aria2-min-split-size 4M
 | 全球学术快报 |      [cnkiexpress](https://express.cnki.net)       |    ✓     | by @rayinfinite |
 |   KingDraw   |           [kingdraw](http://kingdraw.cn)           |    ✓     |                 |
 
+#### 软件开发
+
+|     中文名称      |                                            App                                            | 自动更新 | 备注 |
+|:-----------------:|:-----------------------------------------------------------------------------------------:|:--------:|:----:|
+|     HBuilderX     |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |      |
+| 嘉立创 EDA 标准版 |                                 [lceda](https://lceda.cn)                                 |    ✓     |      |
+|  微信小程序 SDK   | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |      |
+
 #### 日常使用
 
-|    中文名称     |                                            App                                            | 自动更新 |                         备注                         |
-|:---------------:|:-----------------------------------------------------------------------------------------:|:--------:|:----------------------------------------------------:|
-|    阿里云盘     |                               [adrive](https://alipan.com)                                |    ✓     |                                                      |
-|    百度云盘     |                      [baidunetdisk](https://pan.baidu.com/download)                       |    ✓     |                   推荐 WinGet 安装                   |
-|      钉钉       |                             [dingtalk](https://dingtalk.com)                              |    ✓     |                                                      |
-|      抖音       |                               [douyin](https://douyin.com)                                |    ✓     |                                                      |
-|   哔哩下载姬    |                      [downkyi](https://github.com/leiurayer/downkyi)                      |    ✓     |                     by @CronusLM                     |
-|    Edgeless     |                           [edgeless](https://home.edgeless.top)                           |    ✓     |                   by @IsaacWangTT                    |
-|    亿图图示     |                             [edrawmax](https://edrawsoft.cn)                              |    ✓     |                                                      |
-|      飞书       |                                [feishu](https://feishu.cn)                                |    ✓     |                                                      |
-|     EV 录屏     |                       [evcapture](https://ieway.cn/evcapture.html)                        |    ✓     |                                                      |
-|      剪映       |                             [jianying-pro](https://capcut.cn)                             |    ✓     |                                                      |
-|    爱思助手     |                           [i4tools](https://i4.cn/pro_pc.html)                            |    ✓     |                                                      |
-|  洛雪音乐助手   |                  [lx-music](https://github.com/lyswhut/lx-music-desktop)                  |    ✓     |                                                      |
-|   网易云音乐    |                           [neteasemusic](https://music.163.com)                           |    ✓     |                                                      |
-|    腾讯会议     |                      [tencent-meeting](https://meeting.tencent.com)                       |    ✓     |                    by @Ryanjiena                     |
-|    夸克网盘     |                          [quarkclouddrive](https://pan.quark.cn)                          |    ✓     |                                                      |
-|       TIM       |                                 [tim](https://tim.qq.com)                                 |    ✓     |                                                      |
-|     QQ 音乐     |                               [qqmusic](hhttps://y.qq.com/)                               |    ✓     |                                                      |
-|     uTools      |                                 [utools](https://u.tools)                                 |    ✓     |                                                      |
-|     小狼毫      |                                 [weasel](https://rime.im)                                 |    ✓     |                                                      |
-|    WPSOffice    |                          [wpsoffice-cn](https://wps.com/zh-hant)                          |    ✓     |                                                      |
-|      语雀       |                                [yuque](https://yuque.com)                                 |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
-|    AIGCPanel    |                            [aigcpanel](https://aigcpanel.com)                             |    ✓     |                                                      |
-|   BaiduPCS-Go   |                  [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)                   |    ✓     |                                                      |
-|     eSearch     |                     [esearch](https://github.com/xushengfeng/eSearch)                     |    ✓     |                                                      |
-|  Fishing-Funds  |                  [fishing-funds](https://github.com/1zilc/fishing-funds)                  |    ✓     |                                                      |
-|    HBuilderX    |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |                                                      |
-| 微信小程序 SDK  | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |                                                      |
-|     WeGame      |                            [wegame](https://www.wegame.com.cn)                            |    ✓     |                                                      |
-| M3u8-Downloader |             [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader)              |    ✓     |                                                      |
+|    中文名称     |                               App                                | 自动更新 |                         备注                         |
+|:---------------:|:----------------------------------------------------------------:|:--------:|:----------------------------------------------------:|
+|    阿里云盘     |                   [adrive](https://alipan.com)                   |    ✓     |                                                      |
+|    百度云盘     |          [baidunetdisk](https://pan.baidu.com/download)          |    ✓     |                   推荐 WinGet 安装                   |
+|      钉钉       |                 [dingtalk](https://dingtalk.com)                 |    ✓     |                                                      |
+|      抖音       |                   [douyin](https://douyin.com)                   |    ✓     |                                                      |
+|   哔哩下载姬    |         [downkyi](https://github.com/leiurayer/downkyi)          |    ✓     |                     by @CronusLM                     |
+|    Edgeless     |              [edgeless](https://home.edgeless.top)               |    ✓     |                   by @IsaacWangTT                    |
+|    亿图图示     |                 [edrawmax](https://edrawsoft.cn)                 |    ✓     |                                                      |
+|      飞书       |                   [feishu](https://feishu.cn)                    |    ✓     |                                                      |
+|     EV 录屏     |           [evcapture](https://ieway.cn/evcapture.html)           |    ✓     |                                                      |
+|      剪映       |                [jianying-pro](https://capcut.cn)                 |    ✓     |                                                      |
+|    爱思助手     |               [i4tools](https://i4.cn/pro_pc.html)               |    ✓     |                                                      |
+|  洛雪音乐助手   |     [lx-music](https://github.com/lyswhut/lx-music-desktop)      |    ✓     |                                                      |
+|   网易云音乐    |              [neteasemusic](https://music.163.com)               |    ✓     |                                                      |
+|    腾讯会议     |          [tencent-meeting](https://meeting.tencent.com)          |    ✓     |                    by @Ryanjiena                     |
+|    夸克网盘     |             [quarkclouddrive](https://pan.quark.cn)              |    ✓     |                                                      |
+|       TIM       |                    [tim](https://tim.qq.com)                     |    ✓     |                                                      |
+|     QQ 音乐     |                  [qqmusic](hhttps://y.qq.com/)                   |    ✓     |                                                      |
+|     uTools      |                    [utools](https://u.tools)                     |    ✓     |                                                      |
+|     小狼毫      |                    [weasel](https://rime.im)                     |    ✓     |                                                      |
+|    WPSOffice    |             [wpsoffice-cn](https://wps.com/zh-hant)              |    ✓     |                                                      |
+|      语雀       |                    [yuque](https://yuque.com)                    |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
+|    AIGCPanel    |                [aigcpanel](https://aigcpanel.com)                |    ✓     |                                                      |
+|   BaiduPCS-Go   |      [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)      |    ✓     |                                                      |
+|     eSearch     |        [esearch](https://github.com/xushengfeng/eSearch)         |    ✓     |                                                      |
+|  Fishing-Funds  |     [fishing-funds](https://github.com/1zilc/fishing-funds)      |    ✓     |                                                      |
+|     WeGame      |               [wegame](https://www.wegame.com.cn)                |    ✓     |                                                      |
+| M3u8-Downloader | [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader) |    ✓     |                                                      |
 
 ### Win 专属
 
