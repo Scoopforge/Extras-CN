@@ -192,7 +192,7 @@ scoop config aria2-min-split-size 4M
 |           App           | 自动更新 |
 |:-----------------------:|:--------:|
 |       Blender-cn        |    ✓     |
-|         Git-cn          |    ✓     |
+|       DBeaver-cn        |    ✓     |
 |         GIMP-cn         |    ✓     |
 |       GIMP@dev-cn       |    ✓     |
 |        Julia-cn         |    ✓     |
@@ -200,6 +200,7 @@ scoop config aria2-min-split-size 4M
 |     LibreOffice-cn      |    ✓     |
 |         LyX-cn          |    ✓     |
 |      Miniforge-cn       |    ✓     |
+|        Mogan-cn         |    ✓     |
 |        MSYS2-cn         |    ✓     |
 | Navicat-Premium-Lite-cn |    ✓     |
 |      OBS-Studio-cn      |    ✓     |
