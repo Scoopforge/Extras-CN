@@ -5,6 +5,12 @@
     "license": "GPL-3.0-only",
     "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.5.1/QuickBib-Installer-0.5.1.exe",
     "hash": "a41304a4ab88e786fe69cafe847e532f3f69340a0315421404ba90e1a79323fa",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.5.1/QuickBib-Installer-0.5.1.exe",
+            "hash": "a41304a4ab88e786fe69cafe847e532f3f69340a0315421404ba90e1a79323fa"
+        }
+    },
     "installer": {
         "script": [
             "Expand-7ZipArchive \"$dir\\$fname\" \"$dir\\\" -Removal",
