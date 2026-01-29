@@ -34,6 +34,11 @@
         "github": "https://github.com/archisman-panigrahi/QuickBib"
     },
     "autoupdate": {
-        "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Installer-$version.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Installer-$version.exe"
+            }
+        }
     }
+    
 }
