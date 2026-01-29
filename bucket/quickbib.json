@@ -12,7 +12,6 @@
     "installer": {
         "script": [
             "Expand-7ZipArchive \"$dir\\$fname\" \"$dir\\\" -Removal",
-            "# 根据解压后的内容查找实际的可执行文件",
             "$exeFiles = @(Get-ChildItem -Path \"$dir\" -Recurse -Name \"*.exe\" | Where-Object { $_ -match \"QuickBib\" -and $_ -notmatch \"uninst\" })",
             "if ($exeFiles.Count -gt 0) {",
             "    $actualExe = $exeFiles[0]",
@@ -40,5 +39,4 @@
             }
         }
     }
-    
 }
