@@ -9,6 +9,7 @@
             "hash": "ff7f00537b1cb9260f9991b8ef59249150d46ed45daf8293fa461be89812b4aa"
         }
     },
+    "bin": "QuickBib.exe",
     "shortcuts": [
         [
             "QuickBib.exe",
