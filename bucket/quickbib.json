@@ -1,12 +1,12 @@
 {
-    "version": "0.5.1",
+    "version": "0.5.2",
     "description": "Get BibTeX from a DOI — fast",
     "homepage": "https://archisman-panigrahi.github.io/QuickBib/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.5.1/QuickBib-Installer-0.5.1.exe",
-            "hash": "a41304a4ab88e786fe69cafe847e532f3f69340a0315421404ba90e1a79323fa"
+            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.5.2/QuickBib-Installer-0.5.2.exe",
+            "hash": "7fe2dc4c5a6272c5d3ef9810fc92d433cf6d5f27cbbe949c924db6095b825c30"
         }
     },
     "installer": {
