@@ -1,12 +1,12 @@
 {
-    "version": "2.4.9.1",
+    "version": "2.4.9.6",
     "homepage": "https://pixpin.cn/",
     "description": "截图、录屏、OCR - 一款快速灵活的工具",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_2.4.9.1.zip",
-            "hash": "661f84229a85df3ba8fb0d507181181c476402ca9b3cba0a10f809cb8bef0b63"
+            "url": "https://download.pixpin.cn/PixPin_cn_zh-cn_2.4.9.6.zip",
+            "hash": "983a35addfcad40f8e1e74f376e2cdc81979873d840860d4c639f5f177b840b5"
         }
     },
     "extract_dir": "PixPin",
