@@ -31,10 +31,6 @@
             "arm64": {
                 "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-ARM64-portable-v$version.zip"
             }
-        },
-        "hash": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/$version",
-            "regex": "(?sm)$basename.*?$sha256"
         }
     }
 }
