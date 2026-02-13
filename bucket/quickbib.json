@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-portable-v$version.zip"
+                "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-x64-portable-v$version.zip"
             },
             "arm64": {
                 "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v$version/QuickBib-Windows-ARM64-portable-v$version.zip"
