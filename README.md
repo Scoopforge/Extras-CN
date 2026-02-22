@@ -5,8 +5,7 @@
 [![code size](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)
 [![repo size](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)
 
-> [!note] 注意
-> 任何提交过1次有效PR（被合并）的贡献者均可@ivaquero 成为仓库管理员。
+> 👉 本组织致力于推动 Scoop 社区繁荣发展，提供高效审核，鼓励更多人参与。任何提交过1次有效PR（被合并）的贡献者均可@ivaquero 成为仓库管理员。
 
 本仓库为专注于服务国人的 Windows 最佳包管理器 [Scoop](https://github.com/ScoopInstaller/Scoop)扩展库。
 
