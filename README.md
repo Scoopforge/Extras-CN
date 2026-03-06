@@ -5,7 +5,9 @@
 [![code size](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)
 [![repo size](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)
 
-专注于服务国人的 Windows 最佳包管理器 [Scoop](https://github.com/ScoopInstaller/Scoop)扩展库
+> 👉 本组织致力于推动 Scoop 社区繁荣发展，提供高效审核，鼓励更多人参与。任何提交过1次有效PR（被合并）的贡献者均可@ivaquero 成为仓库管理员。
+
+本仓库为专注于服务国人的 Windows 最佳包管理器 [Scoop](https://github.com/ScoopInstaller/Scoop)扩展库。
 
 > ⚠️ 为更好的进行管理，本仓库只收录主要针对国内用户的软件，国际通用软件请添加仓库[Extras-Plus](https://github.com/Scoopforge/Extras-Plus)。
 >
@@ -165,6 +167,7 @@ scoop config aria2-min-split-size 4M
 |      语雀       |                    [yuque](https://yuque.com)                    |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
 |    AIGCPanel    |                [aigcpanel](https://aigcpanel.com)                |    ✓     |                                                      |
 |   BaiduPCS-Go   |      [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)      |    ✓     |                                                      |
+|    BiliTools    |         [bilitools](https://github.com/btjawa/BiliTools)         |    ✓     |                                                      |
 |    Clash-MI     |                 [clash-mi](https://clashmi.app/)                 |    ✓     |                                                      |
 |     eSearch     |        [esearch](https://github.com/xushengfeng/eSearch)         |    ✓     |                                                      |
 |  Fishing-Funds  |     [fishing-funds](https://github.com/1zilc/fishing-funds)      |    ✓     |                                                      |

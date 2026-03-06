@@ -1,16 +1,16 @@
 {
-    "version": "0.6.1",
+    "version": "0.7.1",
     "description": "Get BibTeX from a DOI — fast.",
     "homepage": "https://archisman-panigrahi.github.io/QuickBib/",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.6.1/QuickBib-Windows-x64-portable-v0.6.1.zip",
-            "hash": "f2c49b8ccf4fc81e1daded6224da88babc01a45f7f5999ebe6f9ecc0706f2ef5"
+            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.7.1/QuickBib-Windows-x64-portable-v0.7.1.zip",
+            "hash": "161bcc7dc9293f2f7d2292a3aadac9539626f3e464c0de4e79dea78c5cf1c9a0"
         },
         "arm64": {
-            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.6.1/QuickBib-Windows-ARM64-portable-v0.6.1.zip",
-            "hash": "5545912b81e7df55c5dad4f34c49bd73774391c6c8f07bfa6effb78cfc43af6c"
+            "url": "https://github.com/archisman-panigrahi/QuickBib/releases/download/v0.7.1/QuickBib-Windows-ARM64-portable-v0.7.1.zip",
+            "hash": "2d158b6edaedaeb60d2f2970d7ade7bb69afb896afaf5e54320ffe40d24272db"
         }
     },
     "bin": "QuickBib.exe",
