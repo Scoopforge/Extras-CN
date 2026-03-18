@@ -16,6 +16,7 @@
             "HBuilder X"
         ]
     ],
+    "persist": "plugins",
     "checkver": {
         "url": "https://download1.dcloud.net.cn/hbuilderx/release.json",
         "jsonpath": "$.version"
