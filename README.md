@@ -108,44 +108,44 @@ scoop config aria2-min-split-size 4M
 
 #### 外语学习
 
-|   中文名称   |                          App                             | 自动更新  |  备注   |
-|:------------:|:------------------------------------------------------:|:--------:|:------:|
-|  阿波波外语  |              [aboboo](http://aboboo.com)                 |    ✓     | 精简版  |
-|  阿波波外语  |            [aboboo-full](http://aboboo.com)              |    ✓     | 完整版  |
-|   欧路词典   |               [eudic](https://eudic.net)                 |    ✓     |        |
-|   德语助手   |    [dehelper](https://eudic.net/v4/es/app/dehelper)      |    ✓     |        |
-|   西语助手   |    [eshelper](https://eudic.net/v4/es/app/eshelper)      |    ✓     |        |
-|   法语助手   |    [frhelper](https://eudic.net/v4/fr/app/frhelper)      |    ✓     |        |
-| 每日英语听力 |         [ting-en](http://dict.eudic.net/ting)             |    ✓     |        |
-| 每日德语听力 |      [ting-de](https://eudic.net/v4/de/app/ting)          |    ✓     |        |
-| 每日西语听力 |      [ting-es](https://eudic.net/v4/es/app/ting)          |    ✓     |        |
-| 每日法语听力 |      [ting-fr](https://eudic.net/v4/fr/app/ting)          |    ✓     |        |
-|  DashPlayer  | [dashplayer](https://github.com/solidSpoon/DashPlayer)  |    ✓     |       |
-| Pot-Desktop  |           [pot-desktop](https://pot-app.com)            |    ✓     |       |
+|   中文名称   |                          App                           | 自动更新 |  备注  |
+| :----------: | :----------------------------------------------------: | :------: | :----: |
+|  阿波波外语  |              [aboboo](http://aboboo.com)               |    ✓     | 精简版 |
+|  阿波波外语  |            [aboboo-full](http://aboboo.com)            |    ✓     | 完整版 |
+|   欧路词典   |               [eudic](https://eudic.net)               |    ✓     |        |
+|   德语助手   |    [dehelper](https://eudic.net/v4/es/app/dehelper)    |    ✓     |        |
+|   西语助手   |    [eshelper](https://eudic.net/v4/es/app/eshelper)    |    ✓     |        |
+|   法语助手   |    [frhelper](https://eudic.net/v4/fr/app/frhelper)    |    ✓     |        |
+| 每日英语听力 |         [ting-en](http://dict.eudic.net/ting)          |    ✓     |        |
+| 每日德语听力 |      [ting-de](https://eudic.net/v4/de/app/ting)       |    ✓     |        |
+| 每日西语听力 |      [ting-es](https://eudic.net/v4/es/app/ting)       |    ✓     |        |
+| 每日法语听力 |      [ting-fr](https://eudic.net/v4/fr/app/ting)       |    ✓     |        |
+|  DashPlayer  | [dashplayer](https://github.com/solidSpoon/DashPlayer) |    ✓     |        |
+| Pot-Desktop  |           [pot-desktop](https://pot-app.com)           |    ✓     |        |
 
 #### 学术研究
 
-|   中文名称   |                        App                                   | 自动更新  |      备注       |
-|:------------:|:----------------------------------------------------------:|:--------:|:---------------:|
-|  CAJViewer   | [cajviewer](https://cajviewer.cnki.net/index.html)         |    ✓     | by @rayinfinite |
-|   FreeTex    |        [freetex](https://xdxsb.top/FreeTex)                |    ✓     |                 |
-| 全球学术快报   |      [cnkiexpress](https://express.cnki.net)               |    ✓     | by @rayinfinite |
-|   KingDraw   |           [kingdraw](http://kingdraw.cn)                   |    ✓     |                 |
-|   QuickBib   | [QuickBib](https://archisman-panigrahi.github.io/QuickBib/)|    ✓     |  by YanMing-lxb  |
+|   中文名称   |                             App                             | 自动更新 |      备注       |
+| :----------: | :---------------------------------------------------------: | :------: | :-------------: |
+|  CAJViewer   |     [cajviewer](https://cajviewer.cnki.net/index.html)      |    ✓     | by @rayinfinite |
+|   FreeTex    |            [freetex](https://xdxsb.top/FreeTex)             |    ✓     |                 |
+| 全球学术快报 |           [cnkiexpress](https://express.cnki.net)           |    ✓     | by @rayinfinite |
+|   KingDraw   |               [kingdraw](http://kingdraw.cn)                |    ✓     |                 |
+|   QuickBib   | [QuickBib](https://archisman-panigrahi.github.io/QuickBib/) |    ✓     | by YanMing-lxb  |
 
 #### 软件开发
 
-|     中文名称      |                                            App                                           | 自动更新   | 备注  |
-|:---------------:|:-----------------------------------------------------------------------------------------:|:--------:|:----:|
-|     Cockpit-Tools   |  [cockpit-tools](https://github.com/jlcodes99/cockpit-tools)                                            |    ✓     |      |
-|     HBuilderX   |  [hbuilderx](https://dcloud.io/hbuilderx.html)                                            |    ✓     |      |
-| 嘉立创 EDA 标准版 | [lceda](https://lceda.cn)                                                                 |    ✓     |      |
-|  微信小程序 SDK   | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |      |
+|     中文名称      |                                            App                                            | 自动更新 | 备注  |
+| :---------------: | :---------------------------------------------------------------------------------------: | :------: | :---: |
+|   Cockpit-Tools   |                [cockpit-tools](https://github.com/jlcodes99/cockpit-tools)                |    ✓     |       |
+|     HBuilderX     |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |       |
+| 嘉立创 EDA 标准版 |                                 [lceda](https://lceda.cn)                                 |    ✓     |       |
+|  微信小程序 SDK   | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |       |
 
 #### 日常使用
 
 |    中文名称     |                               App                                | 自动更新 |                         备注                         |
-|:---------------:|:----------------------------------------------------------------:|:--------:|:----------------------------------------------------:|
+| :-------------: | :--------------------------------------------------------------: | :------: | :--------------------------------------------------: |
 |    阿里云盘     |                   [adrive](https://alipan.com)                   |    ✓     |                                                      |
 |    百度云盘     |          [baidunetdisk](https://pan.baidu.com/download)          |    ✓     |                   推荐 WinGet 安装                   |
 |      钉钉       |                 [dingtalk](https://dingtalk.com)                 |    ✓     |                                                      |
@@ -178,30 +178,28 @@ scoop config aria2-min-split-size 4M
 
 ### Win 专属
 
-|        中文名称        |                                     App                                     | 自动更新 |     备注     |
-|:----------------------:|:---------------------------------------------------------------------------:|:--------:|:------------:|
-|    MisakaTranslator    |     [misakatranslator](https://github.com/hanmin0822/MisakaTranslator)      |    ✓     | by @CronusLM |
-|       mpv.net_CM       |          [mpv.net-cm](https://hooke007.github.io/index2#mpvnetcm)           |    ✓     |              |
-|   HEU_KMS_Activator    |       [heu-kms-activator](https://github.com/zbezj/HEU_KMS_Activator)       |    ✓     |              |
-|    LKY-OfficeTools     |     [lky-officetools](https://github.com/OdysseusYuan/LKY_OfficeTools)      |    ✓     |              |
-|   PHPStudy2016 scoop   | [phpstudy-lagecy-scoop](https://github.com/chawyehsu/phpstudy-lagecy-scoop) |    ✓     |              |
-|         Reader         |                 [reader](https://github.com/binbyu/Reader)                  |    ✓     |              |
-|        RegEster        |          [regester](https://deerchao.cn/tools/regester/index.htm)           |    ✓     |              |
-|       SubRenamer       |             [subrenamer](https://github.com/arition/SubRenamer)             |    ✓     |              |
-|   WiFi 密码暴力破解      |      [wifi-crack-tool](https://github.com/baihengaead/wifi-crack-tool)      |    ✓     |              |
-|      傲梅分区助手        |                 [partition-assistant](https://disktool.cn)                  |    ✓     |              |
-|       软件屏蔽器         |          [malware-patch](https://github.com/the1812/Malware-Patch)          |    ✓     |              |
-| 微信/QQ/TIM 防撤回补丁    |    [revoke-msg-patcher](https://github.com/huiyadanli/RevokeMsgPatcher)     |    ✓     |              |
-|     Quicker            | [quicker](https://getquicker.net/)                                          |    ✓     | by YanMing-lxb |
+|        中文名称        |                                     App                                     | 自动更新 |      备注      |
+| :--------------------: | :-------------------------------------------------------------------------: | :------: | :------------: |
+|    MisakaTranslator    |     [misakatranslator](https://github.com/hanmin0822/MisakaTranslator)      |    ✓     |  by @CronusLM  |
+|       mpv.net_CM       |          [mpv.net-cm](https://hooke007.github.io/index2#mpvnetcm)           |    ✓     |                |
+|   HEU_KMS_Activator    |       [heu-kms-activator](https://github.com/zbezj/HEU_KMS_Activator)       |    ✓     |                |
+|    LKY-OfficeTools     |     [lky-officetools](https://github.com/OdysseusYuan/LKY_OfficeTools)      |    ✓     |                |
+|   PHPStudy2016 scoop   | [phpstudy-lagecy-scoop](https://github.com/chawyehsu/phpstudy-lagecy-scoop) |    ✓     |                |
+|         Reader         |                 [reader](https://github.com/binbyu/Reader)                  |    ✓     |                |
+|        RegEster        |          [regester](https://deerchao.cn/tools/regester/index.htm)           |    ✓     |                |
+|       SubRenamer       |             [subrenamer](https://github.com/arition/SubRenamer)             |    ✓     |                |
+|   WiFi 密码暴力破解    |      [wifi-crack-tool](https://github.com/baihengaead/wifi-crack-tool)      |    ✓     |                |
+|      傲梅分区助手      |                 [partition-assistant](https://disktool.cn)                  |    ✓     |                |
+|       软件屏蔽器       |          [malware-patch](https://github.com/the1812/Malware-Patch)          |    ✓     |                |
+| 微信/QQ/TIM 防撤回补丁 |    [revoke-msg-patcher](https://github.com/huiyadanli/RevokeMsgPatcher)     |    ✓     |                |
+|        Quicker         |                     [quicker](https://getquicker.net/)                      |    ✓     | by YanMing-lxb |
 
 ### 开源镜像
 
 |           App           | 自动更新 |
-|:-----------------------:|:--------:|
+| :---------------------: | :------: |
 |       Blender-cn        |    ✓     |
 |       DBeaver-cn        |    ✓     |
-|         GIMP-cn         |    ✓     |
-|       GIMP@dev-cn       |    ✓     |
 |       Inkscape-cn       |    ✓     |
 |        Julia-cn         |    ✓     |
 |        KiCAD-cn         |    ✓     |
