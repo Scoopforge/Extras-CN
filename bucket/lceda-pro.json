@@ -11,7 +11,7 @@
         },
         "arm64": {
             "url": "https://image.lceda.cn/files/lceda-pro-windows-arm64-3.2.127.exe",
-            "hash": "1f7c5884a02bd3f4966a74476608d097b7dc99ce6385cb9db854cc30b9bb6415"
+            "hash": "284e036dcc7ebd0e4f0044c65274a82dc6c27619539e48402a1c500b62aeb241"
         }
     },
     "shortcuts": [
