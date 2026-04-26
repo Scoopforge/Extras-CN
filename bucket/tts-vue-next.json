@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/LokerL/tts-vue-next/releases/download/v0.1.0/tts-vue-next_0.1.0_x64-setup.exe#/tts-vue-next.zip",
-            "hash": "e8cd45a3f1ca1335723554e41ab06fd1f289bacad666ff8adbe9af74a07800de"
+            "hash": "447912d4d6361594f75b0078650333921bbd085c772d0f173a1e288ceac182fb"
         }
     },
     "bin": [
