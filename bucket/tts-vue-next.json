@@ -1,0 +1,37 @@
+{
+    "version": "0.1.0",
+    "description": "微软语音合成工具",
+    "homepage": "https://tts-doc.loker.vip/home.html",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/LokerL/tts-vue-next/releases/download/v0.1.0/tts-vue-next_0.1.0_x64-setup.exe#/tts-vue-next.zip",
+            "hash": "e8cd45a3f1ca1335723554e41ab06fd1f289bacad666ff8adbe9af74a07800de"
+        }
+    },
+    "bin": [
+        [
+            "tts-vue-next.exe",
+            "tts-vue-next",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "shortcuts": [
+        [
+            "tts-vue-next.exe",
+            "TTS-Vue-Next",
+            "--user-data-dir=\"$dir\\User Data\""
+        ]
+    ],
+    "persist": "User Data",
+    "checkver": {
+        "github": "https://github.com/LokerL/tts-vue-next"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/LokerL/tts-vue-next/releases/download/$version/tts-vue-next-$version-setup.exe#/tts-vue-next.zip"
+            }
+        }
+    }
+}
