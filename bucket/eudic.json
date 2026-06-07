@@ -1,7 +1,7 @@
 {
     "version": "2025-02-21",
     "description": "权威的英语词典软件，英语学习者必备的工具",
-    "homepage": "https://eudic.net/",
+    "homepage": "https://www.eudic.net/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
@@ -25,7 +25,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://eudic.net/v4/en/app/download",
+        "url": "https://www.eudic.net/v4/en/app/download",
         "regex": "<a href=\"https://eudic.net/download/eudic_win.zip\\?v=([\\d-]+)\""
     },
     "autoupdate": {

@@ -1,7 +1,7 @@
 {
     "version": "2024-10-25",
     "description": "权威的法语词典软件 法语学习者必备的工具",
-    "homepage": "https://eudic.net/v4/fr/app/frhelper",
+    "homepage": "https://www.eudic.net/v4/fr/app/frhelper",
     "license": "Freeware",
     "architecture": {
         "64bit": {
@@ -24,7 +24,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://eudic.net/v4/fr/app/download",
+        "url": "https://www.eudic.net/v4/fr/app/download",
         "regex": "<a href=\"https://francochinois.com/download/fhsetup.zip?\\?v=([\\d-]+)\""
     },
     "autoupdate": {
