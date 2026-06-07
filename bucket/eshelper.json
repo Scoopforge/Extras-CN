@@ -5,10 +5,10 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://francochinois.com/download/ehsetup.zip"
+            "url": "https://www.francochinois.com/download/ehsetup.zip?v=2024-10-25"
         },
         "32bit": {
-            "url": "https://francochinois.com/download/ehsetup_win32.zip"
+            "url": "https://www.francochinois.com/download/ehsetup_win32.zip?v=2026"
         }
     },
     "installer": {
@@ -25,15 +25,15 @@
     ],
     "checkver": {
         "url": "https://www.eudic.net/v4/es/app/download",
-        "regex": "<a href=\"https://francochinois.com/download/ehsetup.zip?\\?v=([\\d-]+)\""
+        "regex": "发布日期:([\\d+-]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://francochinois.com/download/ehsetup.zip"
+                "url": "https://www.francochinois.com/download/ehsetup.zip?v=$version"
             },
             "32bit": {
-                "url": "https://francochinois.com/download/ehsetup_win32.zip"
+                "url": "https://www.francochinois.com/download/ehsetup_win32.zip?v=$matchHead"
             }
         }
     }
