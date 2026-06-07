@@ -5,7 +5,8 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.francochinois.com/download/fhsetup.zip"
+            "url": "https://www.francochinois.com/download/fhsetup.zip",
+            "hash": "d4f3404259e4f4f94cfe99dd3ead0a811a2a79bcec2e140f5c993c7b41c58ef2"
         }
     },
     "installer": {
