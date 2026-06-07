@@ -189,7 +189,6 @@ scoop config aria2-min-split-size 4M
 |         Reader         |                 [reader](https://github.com/binbyu/Reader)                  |    ✓     |                |
 |        RegEster        |          [regester](https://deerchao.cn/tools/regester/index.htm)           |    ✓     |                |
 |       SubRenamer       |             [subrenamer](https://github.com/arition/SubRenamer)             |    ✓     |                |
-|   WiFi 密码暴力破解    |      [wifi-crack-tool](https://github.com/baihengaead/wifi-crack-tool)      |    ✓     |                |
 |      傲梅分区助手      |                 [partition-assistant](https://disktool.cn)                  |    ✓     |                |
 |       软件屏蔽器       |          [malware-patch](https://github.com/the1812/Malware-Patch)          |    ✓     |                |
 | 微信/QQ/TIM 防撤回补丁 |    [revoke-msg-patcher](https://github.com/huiyadanli/RevokeMsgPatcher)     |    ✓     |                |
