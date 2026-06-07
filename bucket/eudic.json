@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://static.frdic.com/pkg/eudic_win.zip?v=2025-02-21"
+            "url": "https://static.frdic.com/pkg/eudic_win.zip"
         }
     },
     "installer": {

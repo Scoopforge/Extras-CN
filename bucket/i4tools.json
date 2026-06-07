@@ -1,18 +1,19 @@
 {
-    "version": "8.33",
+    "version": "8.57.002",
     "description": "简单好用的多功能苹果设备管理助手",
-    "homepage": "https://i4.cn/pro_pc.html",
+    "homepage": "https://www.i4.cn/pro_pc.html",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://url.i4.cn/2MvQruaa#/dl.7z",
-            "hash": "5dfee102ba80e24fdaf9d9e6816fb38f278159bcd9a21fed6675e7bb8850fc1d"
+            "url": "https://d-app6.i4.cn/i4tools/V8/8.57/i4Tools8_v8.57.002_Setup_x64.exe#/dl.7z",
+            "hash": "17ac9e411a487bdcd30d5f4e5e61c2364ca2abc7a070d8023cbcdb66d1cd1cb5"
         },
         "32bit": {
-            "url": "https://url.i4.cn/R7BzEfaa#/dl.7z",
-            "hash": "10ef8bc6190a602fa9745838008d935e15036afdc35909a9ae08cde3576fe00d"
+            "url": "https://d-app6.i4.cn/i4tools/V8/8.57/i4Tools8_v8.57.002_Setup_x86.exe#/dl.7z",
+            "hash": "61b80b48e33128d61a7296a3b2c5ba5d980b0560379a0e00c127816ecafcb778"
         }
     },
+    "bin": "i4Tools.exe",
     "shortcuts": [
         [
             "i4Tools.exe",
@@ -36,16 +37,19 @@
         ]
     },
     "checkver": {
-        "url": "https://url.i4.cn/2MvQruaa",
-        "regex": "i4Tools8_v(\\d+[\\.\\d]+)_Setup_x64.exe"
+        "script": [
+            "try { $detail = Invoke-WebRequest 'https://url.i4.cn/2MvQruaa' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }",
+            "return $detail.Headers.Location"
+        ],
+        "regex": "https://(?<partialurl>.*)/i4Tools8_v([\\d.]+?)_Setup_x64.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://url.i4.cn/2MvQruaa#/dl.7z"
+                "url": "https://$matchPartialurl/i4Tools8_v$version_Setup_x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://url.i4.cn/R7BzEfaa#/dl.7z"
+                "url": "https://$matchPartialurl/i4Tools8_v$version_Setup_x86.exe#/dl.7z"
             }
         }
     }

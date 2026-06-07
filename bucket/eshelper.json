@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.francochinois.com/download/ehsetup.zip?v=2024-10-25"
+            "url": "https://www.francochinois.com/download/ehsetup.zip"
         }
     },
     "installer": {
