@@ -36,8 +36,11 @@
         ]
     },
     "checkver": {
-        "url": "https://url.i4.cn/bUjmeyaa",
-        "regex": "i4Tools_v([\\d+.]+)_Setup_x64.exe"
+        "script": [
+            "try { $detail = Invoke-WebRequest 'https://url.i4.cn/bUjmeyaa' -MaximumRedirection 0 -ErrorAction Ignore } catch { $_.Exception.Response }",
+            "return $detail.Headers.Location"
+        ],
+        "regex": "i4Tools_v([\\d.]+?)_Setup_x64.exe"
     },
     "autoupdate": {
         "architecture": {
