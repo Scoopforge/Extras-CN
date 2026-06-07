@@ -3,7 +3,7 @@
     "description": "学习英语必备的听力软件",
     "homepage": "https://dict.eudic.net/ting/",
     "license": "Freeware",
-    "url": "https://static.frdic.com/pkg/ting_en_setup.zip",
+    "url": "https://static.frdic.com/pkg/ting_en_setup.zip?ver=2024-09-30",
     "hash": "b4b64c5560353535cc3688ee99d4c6045041da0aef09de6650419835842250aa",
     "installer": {
         "script": [

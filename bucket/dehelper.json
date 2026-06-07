@@ -6,9 +6,6 @@
     "architecture": {
         "64bit": {
             "url": "https://www.francochinois.com/download/dhsetup.zip?v=2024-10-25"
-        },
-        "32bit": {
-            "url": "https://www.francochinois.com/download/dhsetup_win32.zip?v=2026"
         }
     },
     "installer": {
@@ -25,15 +22,12 @@
     ],
     "checkver": {
         "url": "https://www.eudic.net/v4/de/app/download",
-        "regex": "发布日期:([\\d+-]+)"
+        "regex": "发布日期:([\\d+][-\\d+]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
                 "url": "https://www.francochinois.com/download/dhsetup.zip?v=$version"
-            },
-            "32bit": {
-                "url": "https://www.francochinois.com/download/dhsetup_win32.zip?v=$matchHead"
             }
         }
     }
