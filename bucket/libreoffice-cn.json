@@ -9,7 +9,7 @@
     "notes": "If you are upgrading from portable version, you can migrate settings by copying \"$persist_dir\\Data\" to \"%AppData%\\LibreOffice\"",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/libreoffice/libreoffice/stable/25.2.4/win/x86_64/LibreOffice_25.2.4_Win_x86-64.msi#/dl.msi_",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/libreoffice/libreoffice/stable/25.2.4/win/x86_64/LibreOffice_25.2.4_Win_x86-64.msi#/dl.msi_",
             "hash": "a985d08e5311f0fdefbf6b0a599b60112d1fcd388d7ad34121e0be53d597b048"
         },
         "32bit": {
