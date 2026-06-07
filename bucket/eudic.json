@@ -23,7 +23,7 @@
     ],
     "checkver": {
         "url": "https://www.eudic.net/v4/en/app/download",
-        "regex": "发布日期:([\\d+][-\\d+]+)"
+        "regex": "发布日期:([\\d+-]+)"
     },
     "autoupdate": {
         "architecture": {
