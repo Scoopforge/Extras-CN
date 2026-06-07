@@ -21,8 +21,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://edrawsoft.cn/download/",
-        "regex": "版本 ([\\d.]+)（"
+        "url": "https://www.edrawsoft.cn/download/",
+        "regex": "版本([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {

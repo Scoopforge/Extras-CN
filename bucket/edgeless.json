@@ -17,6 +17,6 @@
         "regex": "([\\d\\.]+)"
     },
     "autoupdate": {
-        "url": "https://zfile.edgeless.top/d/Socket/Hub/Edgeless%20Hub_Beta_$version.7z"
+        "url": "https://zfile.edgeless.top/d/Socket/Hub/Edgeless%20Hub_Beta_$version.7z?sign=1fM189Ys5KlNwgh8YwqmRoVMF8VeUGyWTmqDyqD2UHc=:0"
     }
 }
