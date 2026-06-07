@@ -18,7 +18,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://eudic.net/v4/en/app/ting",
+        "url": "https://www.eudic.net/v4/en/app/ting",
         "regex": "应用版本：([\\d\\.]+)"
     },
     "autoupdate": {

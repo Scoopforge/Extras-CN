@@ -69,7 +69,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://mirrors.tuna.tsinghua.edu.cn/libreoffice/libreoffice/",
+        "url": "https://download.documentfoundation.org/libreoffice/stable/",
         "regex": "href=\"(\\d+\\.\\d+\\.\\d+)/\"",
         "reverse": true
     },

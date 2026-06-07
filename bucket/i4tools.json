@@ -37,7 +37,7 @@
     },
     "checkver": {
         "url": "https://url.i4.cn/bUjmeyaa",
-        "regex": "i4Tools(v_[\\d\\.]+)_Setup_x64.exe"
+        "regex": "i4Tools_v([\\d\\.]+)_Setup_x64.exe"
     },
     "autoupdate": {
         "architecture": {
