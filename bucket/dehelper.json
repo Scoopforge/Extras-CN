@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.francochinois.com/download/dhsetup.zip?v=$version"
+                "url": "https://www.francochinois.com/download/dhsetup.zip"
             }
         }
     }
