@@ -22,8 +22,7 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/wxyhgk/retain-pdf",
-        "regex": "RetainPDF-([\\d.]+(?:-beta\\d+))-Setup\\.exe"
+        "github": "https://github.com/wxyhgk/retain-pdf/releases/latest"
     },
     "autoupdate": {
         "architecture": {

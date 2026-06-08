@@ -20,7 +20,9 @@
             "QuickBib"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/archisman-panigrahi/QuickBib"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
