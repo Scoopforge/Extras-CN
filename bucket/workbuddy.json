@@ -42,7 +42,7 @@
     "checkver": {
         "url": "https://www.codebuddy.cn/v2/update?platform=workbuddy-win32-x64-user",
         "jsonpath": "$.url",
-        "regex": "(?<url>.*WorkBuddy-win32-x64-user-(?<version>[\\d.]+)-.*\\.exe)"
+        "regex": "(?<url>.*WorkBuddy-win32-x64-user-(?<version>[\\d.]+-[\\w.]+)\\.exe)"
     },
     "autoupdate": {
         "architecture": {
