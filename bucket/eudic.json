@@ -24,7 +24,7 @@
     ],
     "checkver": {
         "url": "https://www.eudic.net/v4/en/app/download",
-        "regex": "eudic_win.zip?v=([\\d+-]+)"
+        "regex": "<a href=\"https://www.eudic.net/download/eudic_win.zip?eudic_win.zip?v=([\\d+-]+)\""
     },
     "autoupdate": {
         "architecture": {
