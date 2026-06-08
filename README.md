@@ -186,8 +186,6 @@ scoop config aria2-min-split-size 4M
 |   HEU_KMS_Activator    |       [heu-kms-activator](https://github.com/zbezj/HEU_KMS_Activator)       |    ✓     |                |
 |    LKY-OfficeTools     |     [lky-officetools](https://github.com/OdysseusYuan/LKY_OfficeTools)      |    ✓     |                |
 |   PHPStudy2016 scoop   | [phpstudy-lagecy-scoop](https://github.com/chawyehsu/phpstudy-lagecy-scoop) |    ✓     |                |
-|         Reader         |                 [reader](https://github.com/binbyu/Reader)                  |    ✓     |                |
-|        RegEster        |          [regester](https://deerchao.cn/tools/regester/index.htm)           |    ✓     |                |
 |       SubRenamer       |             [subrenamer](https://github.com/arition/SubRenamer)             |    ✓     |                |
 |      傲梅分区助手      |                 [partition-assistant](https://disktool.cn)                  |    ✓     |                |
 |       软件屏蔽器       |          [malware-patch](https://github.com/the1812/Malware-Patch)          |    ✓     |                |

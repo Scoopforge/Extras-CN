@@ -13,7 +13,7 @@
         "script": [
             "Expand-7ZipArchive \"$dir\\eudic_win.exe\" \"$dir\\\" -Removal",
             "Expand-7ZipArchive \"$dir\\app.7z\" \"$dir\" -Removal",
-            "Remove-Item \"$dir\\uninst.exe.nsis\",\"$dir\\`$PLUGINSDIR\"  -Force -Recurse"
+            "Remove-Item \"$dir\\uninst.exe.nsis\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
         ]
     },
     "shortcuts": [
