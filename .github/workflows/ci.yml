@@ -13,12 +13,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout Bucket
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 2
           path: "my_bucket"
       - name: Checkout Scoop
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ScoopInstaller/Scoop
           ref: develop
@@ -38,12 +38,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout Bucket
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           fetch-depth: 2
           path: "my_bucket"
       - name: Checkout Scoop
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ScoopInstaller/Scoop
           ref: develop
