@@ -121,7 +121,6 @@ scoop config aria2-min-split-size 4M
 | 每日西语听力 |      [ting-es](https://eudic.net/v4/es/app/ting)       |    ✓     |        |
 | 每日法语听力 |      [ting-fr](https://eudic.net/v4/fr/app/ting)       |    ✓     |        |
 |  DashPlayer  | [dashplayer](https://github.com/solidSpoon/DashPlayer) |    ✓     |        |
-| Pot-Desktop  |           [pot-desktop](https://pot-app.com)           |    ✓     |        |
 
 #### 学术研究
 
@@ -151,7 +150,6 @@ scoop config aria2-min-split-size 4M
 |    百度云盘     |          [baidunetdisk](https://pan.baidu.com/download)          |    ✓     |                   推荐 WinGet 安装                   |
 |      钉钉       |                 [dingtalk](https://dingtalk.com)                 |    ✓     |                                                      |
 |      抖音       |                   [douyin](https://douyin.com)                   |    ✓     |                                                      |
-|   哔哩下载姬    |         [downkyi](https://github.com/leiurayer/downkyi)          |    ✓     |                     by @CronusLM                     |
 |    Edgeless     |              [edgeless](https://home.edgeless.top)               |    ✓     |                   by @IsaacWangTT                    |
 |    亿图图示     |                 [edrawmax](https://edrawsoft.cn)                 |    ✓     |                                                      |
 |      飞书       |                   [feishu](https://feishu.cn)                    |    ✓     |                                                      |
@@ -173,7 +171,6 @@ scoop config aria2-min-split-size 4M
 |    BiliTools    |         [bilitools](https://github.com/btjawa/BiliTools)         |    ✓     |                                                      |
 |    Clash-MI     |                 [clash-mi](https://clashmi.app/)                 |    ✓     |                                                      |
 |     eSearch     |        [esearch](https://github.com/xushengfeng/eSearch)         |    ✓     |                                                      |
-|  Fishing-Funds  |     [fishing-funds](https://github.com/1zilc/fishing-funds)      |    ✓     |                                                      |
 |     WeGame      |               [wegame](https://www.wegame.com.cn)                |    ✓     |                                                      |
 | M3u8-Downloader | [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader) |    ✓     |                                                      |
 
