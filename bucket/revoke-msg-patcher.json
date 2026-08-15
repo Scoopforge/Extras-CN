@@ -18,8 +18,10 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "64bit": {
-            "url": "https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/$version/RevokeMsgPatcher.v$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/huiyadanli/RevokeMsgPatcher/releases/download/$version/RevokeMsgPatcher.v$version.zip"
+            }
         },
         "extract_dir": "RevokeMsgPatcher.v$version"
     }
