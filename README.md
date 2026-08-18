@@ -168,7 +168,6 @@ scoop config aria2-min-split-size 4M
 |      语雀       |                    [yuque](https://yuque.com)                    |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
 |    AIGCPanel    |                [aigcpanel](https://aigcpanel.com)                |    ✓     |                                                      |
 |   BaiduPCS-Go   |      [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)      |    ✓     |                                                      |
-|    BiliTools    |         [bilitools](https://github.com/btjawa/BiliTools)         |    ✓     |                                                      |
 |    Clash-MI     |                 [clash-mi](https://clashmi.app/)                 |    ✓     |                                                      |
 |     eSearch     |        [esearch](https://github.com/xushengfeng/eSearch)         |    ✓     |                                                      |
 |     WeGame      |               [wegame](https://www.wegame.com.cn)                |    ✓     |                                                      |
