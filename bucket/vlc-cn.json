@@ -8,9 +8,9 @@
             "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/3.0.23/win64/vlc-3.0.23-win64.7z",
             "hash": "eb4fd8a28291da73608c733786a09610fea865fbe94113bcb60b91c1ebb8404a"
         },
-        "32bit": {
-            "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/3.0.23/win32/vlc-3.0.23-win32.7z",
-            "hash": "f148ff49cdac6c0b6b7018ad7c4e6cd24c99bc6c2dea8258d82684261a639017"
+        "arm64": {
+            "url": "https://download.videolan.org/pub/vlc/3.0.23/winarm64/vlc-3.0.23-winarm64.7z",
+            "hash": "63014f3f3431681384e0306c7fe9846f7aa014faad8b0b7571e8ce5360e3220b"
         }
     },
     "extract_dir": "vlc-3.0.23",
@@ -22,6 +22,7 @@
         "    Move-Item \"$dir\\portable\\vlc-qt-interface.ini\" \"$dir\\portable\\vlc\"",
         "}"
     ],
+    "bin": "vlc.exe",
     "shortcuts": [
         [
             "vlc.exe",
@@ -30,7 +31,7 @@
     ],
     "persist": "portable",
     "checkver": {
-        "url": "https://videolan.org/vlc/download-windows.html",
+        "url": "https://www.videolan.org/vlc/download-windows.html",
         "regex": "\\s+([\\d.]+)</span>"
     },
     "autoupdate": {
@@ -39,7 +40,7 @@
                 "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/$version/win64/vlc-$version-win64.7z"
             },
             "32bit": {
-                "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/$version/win32/vlc-$version-win32.7z"
+                "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/$version/winarm64/vlc-$version-winarm64.7z"
             }
         },
         "hash": {
