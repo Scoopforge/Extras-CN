@@ -6,14 +6,11 @@
         "identifier": "EULA",
         "url": "https://feishu.cn/en/terms"
     },
+    "notes": "Runtime data are stored in '%APPDATA%\\LarkShell', and are not persisted by Scoop.",
     "architecture": {
         "64bit": {
             "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/349a2fc5/Feishu-win32_x64-7.75.15-signed.exe#/dl.7z",
             "hash": "md5:434450387665adeba8b0e5103fcd0cd5"
-        },
-        "32bit": {
-            "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/a031a9fd/Feishu-win32_ia32-7.75.15-signed.exe#/dl.7z",
-            "hash": "md5:1833e65f4b0a8ea94c496cd1f5602956"
         }
     },
     "extract_to": "app",
@@ -43,15 +40,7 @@
                     "url": "https://feishu.cn/api/downloads",
                     "jsonpath": "$.versions.Windows_x64.hash"
                 }
-            },
-            "32bit": {
-                "url": "https://sf3-cn.feishucdn.com/obj/ee-appcenter/$matchId32/Feishu-win32_ia32-$version-signed.exe#/dl.7z",
-                "hash": {
-                    "url": "https://feishu.cn/api/downloads",
-                    "jsonpath": "$.versions.Windows.hash"
-                }
             }
         }
-    },
-    "notes": "Runtime data are stored in '%APPDATA%\\LarkShell', and are not persisted by Scoop."
+    }
 }

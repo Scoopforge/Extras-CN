@@ -61,7 +61,7 @@
             "64bit": {
                 "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/$version/win64/vlc-$version-win64.7z"
             },
-            "32bit": {
+            "arm64": {
                 "url": "https://mirrors.ustc.edu.cn/videolan-ftp/vlc/$version/winarm64/vlc-$version-winarm64.7z"
             }
         },
