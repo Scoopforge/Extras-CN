@@ -1,12 +1,12 @@
 {
-    "version": "6.2.0",
+    "version": "6.2.2",
     "description": "FFmpegFreeUI",
     "homepage": "https://github.com/Lake1059/FFmpegFreeUI/blob/main/README.md",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/6.2.0/FFmpegFreeUI.x64.exe",
-            "hash": "084182c8175ac06a478d7aa2e464f9913c53a655659b574951ce456d44014fb4"
+            "url": "https://github.com/Lake1059/FFmpegFreeUI/releases/download/6.2.2/FFmpegFreeUI.x64.exe",
+            "hash": "c27c67c1af19e55d3b212fedbfefba62bc55952841b2481ec1463fdb8734d09e"
         }
     },
     "shortcuts": [
