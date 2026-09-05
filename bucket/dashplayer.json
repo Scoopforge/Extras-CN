@@ -1,12 +1,12 @@
 {
-    "version": "6.7.0",
+    "version": "6.8.0",
     "description": "为英语学习者量身打造的视频播放器",
     "homepage": "https://dash-player.solidspoon.xyz/",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/solidSpoon/DashPlayer/releases/download/v6.7.0/DashPlayer-6.7.0.setup.exe",
-            "hash": "470e43f75bdba7c8b85fb37f0bfe37fdec78369758c0306a7541d352dc8a3da8"
+            "url": "https://github.com/solidSpoon/DashPlayer/releases/download/v6.8.0/DashPlayer-6.8.0.setup.exe",
+            "hash": "8bee96b54cf825d934e38ae598e4dda38e7d07859c8f9e6bfc8e44e617320119"
         }
     },
     "installer": {
