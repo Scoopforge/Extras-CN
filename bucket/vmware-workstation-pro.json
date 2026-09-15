@@ -16,7 +16,7 @@
             "/qn",
             "EULAS_AGREED=1",
             "DATACOLLECTION=0",
-            "DESKTOP_SHORTCUT=0",
+            "DESKTOP_SHORTCUT=1",
             "STARTMENU_SHORTCUT=0",
             "AUTOSOFTWAREUPDATE=0",
             "INSTALLDIR=\"\"$dir\"\"",
