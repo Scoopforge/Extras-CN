@@ -21,8 +21,10 @@
         "regex": "tag_name\\s*:\\s*\"(?<version>windows-v(?>[\\d.]+(?:-[\\w.-]+)?))\""
     },
     "autoupdate": {
-        "64bit": {
-            "url": "https://github.com/qingjian-team/qingjian/releases/download/windows-$version/qingjian-$version-windows-x86_64-setup.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/qingjian-team/qingjian/releases/download/windows-$version/qingjian-$version-windows-x86_64-setup.exe"
+            }
         }
     }
 }
