@@ -137,6 +137,7 @@ scoop config aria2-min-split-size 4M
 |     中文名称      |                                            App                                            | 自动更新 | 备注  |
 | :---------------: | :---------------------------------------------------------------------------------------: | :------: | :---: |
 |   Cockpit-Tools   |                [cockpit-tools](https://github.com/jlcodes99/cockpit-tools)                |    ✓     |       |
+|   EasyEDA Agent   |               [easyeda](https://github.com/zhoushoujianwork/easyeda-agent)                |    ✓     |       |
 |     HBuilderX     |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |       |
 | 嘉立创 EDA 标准版 |                                 [lceda](https://lceda.cn)                                 |    ✓     |       |
 | 嘉立创 EDA 专业版 |                               [lceda-pro](https://lceda.cn)                               |    ✓     |       |
