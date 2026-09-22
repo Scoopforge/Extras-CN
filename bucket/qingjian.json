@@ -17,11 +17,12 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/qingjian-team/qingjian/releases",
-        "regex": "download/windows-v([\\d.]+)/qingjian-[\\d.]+-windows-x86_64-setup.exe",
-        "replace": "$1"
+        "url": "https://api.github.com/repos/qingjian-team/qingjian/releases",
+        "regex": "tag_name\\s*:\\s*\"(?<version>windows-v(?>[\\d.]+(?:-[\\w.-]+)?))\""
     },
     "autoupdate": {
-        "url": "https://github.com/qingjian-team/qingjian/releases/download/windows-$version/qingjian-$version-windows-x86_64-setup.exe"
+        "64bit": {
+            "url": "https://github.com/qingjian-team/qingjian/releases/download/windows-$version/qingjian-$version-windows-x86_64-setup.exe"
+        }
     }
 }
