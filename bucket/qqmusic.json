@@ -21,13 +21,15 @@
     ],
     "checkver": {
         "script": [
-            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq%5Breq%5D%5Bsoft_id_list%5D%5B%5D=10' -Method 'POST'",
-            "Write-Output $res.Content"
+            "$res = Invoke-WebRequest -UseBasicParsing -Uri 'https://luban.m.qq.com/api/public/software-manager/softwareProxy' -Body 'cmdid=3318&jprxReq[req][soft_id_list]=10' -Method 'POST'",
+            "$content = $res.Content | ConvertFrom-Json",
+            "$verName = $content.resp.soft_list[0].ver_name",
+            "$fileName = $content.resp.soft_list[0].file_name",
+            "Write-Output \"$verName|$fileName\""
         ],
-        "jsonpath": "$.resp.soft_list[0].download_https_url",
-        "regex": "//(?<url>.+)/QQMusic_Setup_(\\d+)\\.exe"
+        "regex": "(?<version>[\\d.]+)\\|(?<id>.*)"
     },
     "autoupdate": {
-        "url": "https://$matchUrl/QQMusic_Setup_$version.exe#/dl.7z"
+        "url": "https://webcdn.m.qq.com/spcmgr/download/$matchId#/dl.7z"
     }
 }
