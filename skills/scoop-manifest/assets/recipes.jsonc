@@ -1,0 +1,720 @@
+{
+    "schema": 1,
+    "default_recipe": "github-portable-zip",
+    "summary_sections": [
+        "跨平台",
+        "Win 专属",
+        "开源镜像"
+    ],
+    "param_docs": {
+        "version": "Upstream version string, without the leading v (e.g. 2.1.46)",
+        "desc": "One-line English description. Capitalized, no trailing period, <=120 chars",
+        "homepage": "Upstream homepage or repository URL",
+        "license": "SPDX identifier (MIT / Apache-2.0 / GPL-3.0-or-later); use Proprietary for closed-source, or {\"identifier\":..., \"url\":...}",
+        "comment": "Free text for the `##` key, the documented Scoop convention for a comment inside a manifest",
+        "arch": "Architecture set: 64bit, arm64, or a + joined combination; defaults to 64bit. 32bit is deliberately not supported",
+        "url64": "64bit direct download URL. Hard-code the current version in it",
+        "url_arm64": "arm64 direct download URL (required when arch includes arm64)",
+        "url": "Single-architecture direct download URL (non-GitHub cases)",
+        "hash64": "sha256 for url64. A sha1: / sha512: / md5: prefixed digest is accepted only when autoupdate.hash says where Excavator refetches it",
+        "hash_arm64": "sha256 for url_arm64, same prefix rule as hash64",
+        "repo_url": "GitHub repository URL, for the checkver github form (e.g. https://github.com/o/r)",
+        "extract_dir": "Directory name inside the archive. Always $PLUGINSDIR for electron-builder output. When it embeds the version, autoupdate.extract_dir is templated automatically",
+        "extract_to": "Target subdirectory to extract into. Use the same value as extract_dir when paired",
+        "nsis_payload": "Name of the inner 7z inside an electron-builder NSIS installer; defaults to app-64.7z (app-arm64.7z on arm64)",
+        "msi_mode": "How to handle an .msi download: extract (unpack into $dir with Expand-MsiArchive, portable) or install (run msiexec, needs admin). Defaults to extract",
+        "msi_args": "Extra msiexec flags used by msi_mode=install; defaults to /qn and /norestart",
+        "shortcut_exe": "Executable the shortcut points to, relative to $dir, using backslashes (e.g. bin\\App.exe)",
+        "shortcut_name": "Display name in the Start menu",
+        "shortcut_entries": "Verbatim shortcuts array, for several entries or a submenu path. Overrides shortcut_exe",
+        "bin_exe": "Executable to put on PATH, relative to $dir",
+        "bin_alias": "Command-line alias (shim name)",
+        "bin_entries": "Verbatim bin array, for several executables or a mix of plain and aliased entries. Overrides bin_exe",
+        "persist": "Directory or file to keep across versions (relative to $dir); an array is allowed",
+        "psmodule_name": "PowerShell module name, for the psmodule block (e.g. CompletionPredictor)",
+        "psmodule_path": "Optional subdirectory holding the module inside the package",
+        "extra_urls": "Sidecar files downloaded alongside the main package, as an array of URLs",
+        "extra_hashes": "sha256 digests matching extra_urls one for one",
+        "env_add_path": "Directory appended to PATH on install, relative to $dir",
+        "env_set": "Object of environment variables written on install",
+        "installer_script": "Custom install script (PowerShell snippet array or single string), runs inside $dir",
+        "installer_file": "Run a file that came with the package instead of a script (e.g. a bundled setup exe)",
+        "installer_args": "Argument array handed to installer_file",
+        "uninstaller_script": "Custom uninstall script",
+        "post_install": "Post-install cleanup script",
+        "pre_install": "Pre-install preparation script",
+        "innosetup": "Set true to declare an InnoSetup payload so Scoop unpacks it natively instead of running a custom installer script",
+        "pre_uninstall": "Script run before uninstall (e.g. msiexec /x for msi_mode=install)",
+        "post_uninstall": "Script run after uninstall (e.g. removing a leftover %APPDATA% directory)",
+        "checkver_github": "GitHub repository URL for the checkver github key. Never an api.github.com URL: Scoop appends /releases/latest itself",
+        "checkver_url": "Web page / API endpoint used to detect the version. Optional: without it Scoop scrapes the homepage, and a regex on its own collapses to the bare-string checkver shorthand",
+        "checkver_regex": "Regex extracting the version from the checkver_url response; prefer a (?<version>...) named group",
+        "checkver_jsonpath": "jsonpath picking a value out of a JSON response (e.g. $.assets[*].browser_download_url)",
+        "checkver_xpath": "xpath picking a value out of an XML response",
+        "checkver_replace": "Template rearranging regex named groups into a version (e.g. ${year}.${month}.${day})",
+        "checkver_reverse": "Set true to take the last regex match instead of the first; for pages that list newest first",
+        "checkver_script": "PowerShell snippet returning the text checkver_regex runs against; needs a Scoop environment, so update --checkver cannot probe it offline",
+        "checkver_sourceforge": "SourceForge project path for the checkver sourceforge key (e.g. beebeep/Windows)",
+        "checkver_useragent": "Custom User-Agent for the checkver request, when the site blocks the default",
+        "url_au": "URL template for autoupdate, containing $version. Use $matchName / $matchBuild to carry extra named groups from checkver_regex",
+        "au_hash_url": "URL autoupdate fetches the hash from (a checksum file, or a release asset such as latest.yml)",
+        "au_hash_regex": "Regex pulling sha256 out of the checksum file; may use $sha256 / $sha1 / $sha512 / $basename / $base64",
+        "notes": "Install notes, shown in scoop output",
+        "suggest": "Packages suggested alongside (scoop form, e.g. extras/7zip)",
+        "depends": "Hard dependency (scoop form)",
+        "section": "README summary table section, one of summary_sections (跨平台 / Win 专属 / 开源镜像)"
+    },
+    "recipes": [
+        {
+            "id": "github-portable-zip",
+            "label": "GitHub Release · portable archive",
+            "when": "The release ships a plain .zip / .7z / .tar.gz portable archive that works once extracted, with no installer.",
+            "builder": "github_portable_zip",
+            "defaults": {
+                "arch": "64bit"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "arch",
+                "url_arm64",
+                "hash64",
+                "hash_arm64",
+                "extract_dir",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "suggest",
+                "notes"
+            ],
+            "refs": [
+                "alexandria",
+                "normcap",
+                "cytoscape",
+                "comfyui",
+                "catime",
+                "flying-carpet",
+                "pdf4qt",
+                "file-converter"
+            ]
+        },
+        {
+            "id": "github-nsis-7z",
+            "label": "GitHub Release · electron-builder NSIS shell (7z extraction)",
+            "when": "The release is an NSIS .exe installer built by an electron app; the real payload inside is a 7z under $PLUGINSDIR. Skip the installer and treat the shell as a 7z.",
+            "builder": "github_nsis_7z",
+            "defaults": {
+                "arch": "64bit",
+                "nsis_payload": "app-64.7z"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "shortcut_exe"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "arch",
+                "url_arm64",
+                "hash64",
+                "hash_arm64",
+                "nsis_payload",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "aionui",
+                "bananas",
+                "hermes-one",
+                "cumora",
+                "tylina",
+                "mineru",
+                "zlibrary",
+                "jupyterlab-desktop",
+                "comfyui-manager"
+            ]
+        },
+        {
+            "id": "github-innosetup",
+            "label": "GitHub Release · InnoSetup installer",
+            "when": "The release is an InnoSetup .exe. Scoop unpacks it natively: just set innosetup to true and do not write your own installer.script.",
+            "builder": "github_innosetup",
+            "defaults": {
+                "arch": "64bit"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "shortcut_exe"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "arch",
+                "url_arm64",
+                "hash64",
+                "hash_arm64",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "scihubeva",
+                "pastemd",
+                "winhance",
+                "isobuster",
+                "doxygen-gui",
+                "navicat-premium-lite",
+                "wisecare365"
+            ]
+        },
+        {
+            "id": "github-exe-installer",
+            "label": "GitHub Release · custom installer script",
+            "when": "The installer genuinely has to run (writes registry keys / installs drivers / files must be moved after installing into $dir); neither InnoSetup nor 7z extraction applies.",
+            "builder": "github_exe_installer",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "hash64",
+                "installer_script",
+                "installer_file",
+                "installer_args",
+                "pre_install",
+                "uninstaller_script",
+                "post_install",
+                "pre_uninstall",
+                "post_uninstall",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "vibe",
+                "cap",
+                "open-design",
+                "buzz",
+                "linkandroid",
+                "voov-meeting",
+                "watt-toolkit",
+                "veracrypt"
+            ]
+        },
+        {
+            "id": "github-single-exe",
+            "label": "GitHub Release · single portable exe",
+            "when": "The release is one bare .exe, usable as-is with no extraction.",
+            "builder": "github_single_exe",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "shortcut_exe"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "hash64",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "configure-defender",
+                "netlogo",
+                "defender-remover"
+            ]
+        },
+        {
+            "id": "webpage-regex",
+            "label": "Non-GitHub · version detected from a web page",
+            "when": "Upstream is not GitHub (own website / own CDN). Use the website page or a version endpoint for checkver; omit checkver_url to scrape the homepage itself, which collapses checkver to the bare regex string.",
+            "builder": "webpage_regex",
+            "defaults": {
+                "arch": "64bit"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "checkver_regex"
+            ],
+            "optional": [
+                "comment",
+                "checkver_url",
+                "url_au",
+                "au_hash_url",
+                "au_hash_regex",
+                "url64",
+                "arch",
+                "url_arm64",
+                "hash64",
+                "hash_arm64",
+                "checkver_reverse",
+                "checkver_xpath",
+                "checkver_useragent",
+                "extract_dir",
+                "pre_install",
+                "installer_script",
+                "innosetup",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "suggest",
+                "notes"
+            ],
+            "refs": [
+                "bitcomet",
+                "veracrypt",
+                "doxygen-gui",
+                "isobuster",
+                "texlive",
+                "wisecare365",
+                "voov-meeting",
+                "landrop-latest"
+            ]
+        },
+        {
+            "id": "api-jsonpath",
+            "label": "API · version detected via jsonpath",
+            "when": "Upstream only offers rolling builds / no tags (e.g. built from main, commit timestamps as versions). Use a JSON API plus jsonpath to pick the version field.",
+            "builder": "api_jsonpath",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "checkver_url",
+                "checkver_jsonpath",
+                "checkver_regex"
+            ],
+            "optional": [
+                "comment",
+                "checkver_replace",
+                "checkver_reverse",
+                "url_au",
+                "au_hash_url",
+                "au_hash_regex",
+                "extract_dir",
+                "installer_script",
+                "installer_file",
+                "installer_args",
+                "uninstaller_script",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "depends",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "filecentipede",
+                "comfyui-manager"
+            ]
+        },
+        {
+            "id": "github-asset-jsonpath",
+            "label": "GitHub Release · version read from the asset list",
+            "when": "The release filename carries more than the version (a build number, a codename), so the download URL cannot be rebuilt by swapping $version alone. Read the asset list from the GitHub API and carry the extra fields through $match* placeholders.",
+            "builder": "github_asset_jsonpath",
+            "defaults": {
+                "arch": "64bit"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "checkver_url",
+                "checkver_jsonpath",
+                "checkver_regex",
+                "url_au"
+            ],
+            "optional": [
+                "comment",
+                "arch",
+                "url_arm64",
+                "hash64",
+                "hash_arm64",
+                "extract_dir",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "suggest",
+                "notes"
+            ],
+            "refs": [
+                "86box",
+                "adventuregamestudio",
+                "aegisub-arch1t3cht",
+                "age",
+                "anki",
+                "anytype"
+            ]
+        },
+        {
+            "id": "github-source-archive",
+            "label": "GitHub Release · source tag archive",
+            "when": "The release is a source snapshot (archive/refs/tags/v$version) rather than a built binary, or the archive expands to a version-stamped directory that autoupdate must re-template.",
+            "builder": "github_source_archive",
+            "defaults": {
+                "arch": "64bit"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "extract_dir"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "arch",
+                "hash64",
+                "au_hash_url",
+                "au_hash_regex",
+                "pre_install",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "suggest",
+                "depends",
+                "notes"
+            ],
+            "refs": [
+                "86box-roms",
+                "activemq-artemis",
+                "activemq",
+                "aircrack-ng",
+                "antimicrox",
+                "audacity"
+            ]
+        },
+        {
+            "id": "github-msi",
+            "label": "GitHub Release · .msi installer",
+            "when": "The download is an .msi. Rename it with a #/*.msi_ fragment so Scoop does not unpack it, then either Expand-MsiArchive it into $dir (portable) or hand it to msiexec (needs admin).",
+            "builder": "github_msi",
+            "defaults": {
+                "arch": "64bit",
+                "msi_mode": "extract"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "hash64",
+                "msi_mode",
+                "msi_args",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "suggest",
+                "notes"
+            ],
+            "refs": [
+                "libreoffice",
+                "gtk-sharp",
+                "msxml4",
+                "openvpn"
+            ]
+        },
+        {
+            "id": "powershell-gallery",
+            "label": "PowerShell Gallery · module package",
+            "when": "The package is a PowerShell module published to the PowerShell Gallery as a .nupkg, installed through the psmodule block rather than bin / shortcuts.",
+            "builder": "powershell_gallery",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "checkver_url",
+                "checkver_regex",
+                "psmodule_name"
+            ],
+            "optional": [
+                "comment",
+                "hash64",
+                "psmodule_path",
+                "pre_install",
+                "url_au",
+                "notes"
+            ],
+            "refs": [
+                "completionpredictor",
+                "dockercompletion",
+                "git-aliases",
+                "posh-docker",
+                "leet"
+            ]
+        },
+        {
+            "id": "checkver-script",
+            "label": "Non-GitHub · version found by running a script",
+            "when": "The version only becomes visible after a request the manifest has to make itself (following a redirect, calling an API with a computed URL). Note that update --checkver cannot probe this offline and says so.",
+            "builder": "non_github_single",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "checkver_script",
+                "checkver_regex"
+            ],
+            "optional": [
+                "comment",
+                "url_au",
+                "au_hash_url",
+                "au_hash_regex",
+                "extract_dir",
+                "pre_install",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "airdroid",
+                "anydesk",
+                "betterbird",
+                "bifrost",
+                "blender",
+                "dolphin"
+            ]
+        },
+        {
+            "id": "sourceforge",
+            "label": "SourceForge · project download",
+            "when": "Upstream lives on SourceForge. The sourceforge checkver key queries the project RSS itself, so no page scraping is needed.",
+            "builder": "non_github_single",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "checkver_sourceforge",
+                "checkver_regex"
+            ],
+            "optional": [
+                "comment",
+                "url_au",
+                "au_hash_url",
+                "au_hash_regex",
+                "extract_dir",
+                "pre_install",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "notes"
+            ],
+            "refs": [
+                "beebeep",
+                "cdburnerxp",
+                "chart-geany",
+                "crystaldiskinfo",
+                "crystaldiskmark",
+                "cudatext"
+            ]
+        },
+        {
+            "id": "redirect-arch",
+            "label": "Fixed redirect URL · versionless direct link",
+            "when": "Upstream offers a permanent link such as latest/redirect with no version anywhere in the URL. The version can only be detected elsewhere (e.g. the winget-pkgs commit history).",
+            "builder": "redirect_arch",
+            "defaults": {
+                "arch": "64bit+arm64"
+            },
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "url_arm64",
+                "checkver_url",
+                "checkver_regex",
+                "shortcut_exe"
+            ],
+            "optional": [
+                "comment",
+                "arch",
+                "checkver_reverse",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "notes"
+            ],
+            "refs": [
+                "claude-desktop"
+            ]
+        },
+        {
+            "id": "portable-multifile",
+            "label": "Portable · main archive plus sidecar files",
+            "when": "One package needs several downloads: the main archive plus a helper script, an icon, or a hotfix archive. url and hash become arrays, and autoupdate tracks only the main download.",
+            "builder": "portable_multifile",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url64",
+                "hash64",
+                "extra_urls",
+                "extra_hashes"
+            ],
+            "optional": [
+                "comment",
+                "repo_url",
+                "extract_dir",
+                "pre_install",
+                "post_install",
+                "shortcut_exe",
+                "shortcut_name",
+                "shortcut_entries",
+                "bin_exe",
+                "bin_alias",
+                "bin_entries",
+                "persist",
+                "env_add_path",
+                "env_set",
+                "suggest",
+                "notes"
+            ],
+            "refs": [
+                "7ztm",
+                "bytecode-viewer",
+                "camstudio",
+                "context-menu-manager",
+                "appengine-go"
+            ]
+        },
+        {
+            "id": "github-git-clone",
+            "label": "Plugin · installed via git clone",
+            "when": "The package is not an executable but a plugin / extension for a host application, and has to be git cloned into the host directory. depends is mandatory.",
+            "builder": "github_git_clone",
+            "defaults": {},
+            "required": [
+                "version",
+                "desc",
+                "homepage",
+                "license",
+                "url",
+                "depends",
+                "installer_script",
+                "checkver_url",
+                "checkver_jsonpath",
+                "checkver_regex"
+            ],
+            "optional": [
+                "comment",
+                "checkver_replace",
+                "extract_dir",
+                "uninstaller_script",
+                "post_uninstall",
+                "notes"
+            ],
+            "refs": [
+                "comfyui-manager"
+            ]
+        }
+    ]
+}
