@@ -148,6 +148,7 @@ scoop config aria2-min-split-size 4M
 |    中文名称     |                               App                                | 自动更新 |                         备注                         |
 | :-------------: | :--------------------------------------------------------------: | :------: | :--------------------------------------------------: |
 |    阿里云盘     |                   [adrive](https://alipan.com)                   |    ✓     |                                                      |
+|    AutoClip     |        [autoclip](https://github.com/zhouxiaoka/autoclip)        |    ✓     |                                                      |
 |    百度云盘     |          [baidunetdisk](https://pan.baidu.com/download)          |    ✓     |                   推荐 WinGet 安装                   |
 |      钉钉       |                 [dingtalk](https://dingtalk.com)                 |    ✓     |                                                      |
 |      抖音       |                   [douyin](https://douyin.com)                   |    ✓     |                                                      |
