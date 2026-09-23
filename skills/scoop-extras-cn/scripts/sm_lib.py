@@ -1,7 +1,7 @@
-"""Shared library for the scoop-manifest skill (Python standard library only).
+"""Shared library for the scoop-extras-cn skill (Python standard library only).
 
 Layers:
-    paths        skill_root / assets_dir / find_repo_root / bucket_dir
+    paths        skill_root / assets_dir / scoop_bucket_root / find_repo_root / bucket_dir
     serialize    load_manifest / dumps_manifest / write_manifest (4-space indent + CRLF + trailing newline + canonical key order)
     recipes      load_recipes / recipe_by_id / build_manifest (assets/recipes.jsonc is the single source of truth)
     checkver     detect_latest (github / url+regex / url+jsonpath+regex+replace)
@@ -18,16 +18,18 @@ import contextlib
 import difflib
 import hashlib
 import json
+import os
 import re
 import sys
 import unicodedata
 import urllib.error
 import urllib.request
 from collections import OrderedDict
+from collections.abc import Sequence
 from pathlib import Path
 from typing import Any
 
-USER_AGENT = "scoop-manifest-skill/1.0 (+https://github.com/Scoopforge/Extras-CN)"
+USER_AGENT = "scoop-extras-cn-skill/1.0 (+https://github.com/Scoopforge/Extras-CN)"
 
 # This bucket targets Chinese users, so a description written in Chinese is the
 # repo convention rather than a defect: 57 of the 88 manifests here do it. The
@@ -39,6 +41,7 @@ CJK_RE = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff]")
 def has_cjk(text: str) -> bool:
     """True when the text contains Chinese (or CJK) characters."""
     return bool(CJK_RE.search(text))
+
 
 # --------------------------------------------------------------------------
 # 0. Exceptions and runtime
@@ -80,15 +83,57 @@ def references_dir() -> Path:
     return skill_root() / "references"
 
 
-def find_repo_root(start: Path | None = None) -> Path:
-    """Walk upwards for a directory holding both bucket/ and README.md."""
+# The skill is bound to one bucket, and to the copy of it Scoop itself has
+# installed. The location is read from the environment at run time -- the docs
+# spell it `$env:Scoop/buckets/extras-cn`, and a literal drive path never
+# appears in this package, so the globally installed skill works on any machine
+# and from any cwd.
+SCOOP_ENV_VAR = "Scoop"
+BUCKET_NAME = "extras-cn"
+BUCKETS_SUBDIR = "buckets"
+
+
+def is_bucket_root(path: Path) -> bool:
+    """True when *path* looks like a bucket repo: bucket/ next to README.md."""
+    return (path / "bucket").is_dir() and (path / "README.md").is_file()
+
+
+def scoop_bucket_root() -> Path | None:
+    """`$env:Scoop/buckets/extras-cn`, or None when Scoop is not installed."""
+    home = os.environ.get(SCOOP_ENV_VAR, "").strip()
+    if not home:
+        return None
+    return Path(home) / BUCKETS_SUBDIR / BUCKET_NAME
+
+
+def find_repo_root(explicit: Path | None = None, start: Path | None = None) -> Path:
+    """Resolve the bucket repo to operate on.
+
+    Precedence: an explicit `--repo` path, then `$env:Scoop/buckets/extras-cn`,
+    so the globally installed skill writes into the bucket Scoop actually reads
+    whatever the cwd is, then the nearest ancestor of *start* (the cwd by
+    default) holding both bucket/ and README.md, which covers a plain checkout
+    on a machine without the Scoop environment.
+    """
+    if explicit is not None:
+        candidate = Path(explicit)
+        if not is_bucket_root(candidate):
+            raise SmError(
+                "--repo is not a bucket root (needs both bucket/ and README.md): "
+                f"{candidate}"
+            )
+        return candidate.resolve()
+    installed = scoop_bucket_root()
+    if installed is not None and is_bucket_root(installed):
+        return installed.resolve()
     base = Path(start).resolve() if start is not None else Path.cwd().resolve()
-    for cand in [base, *base.parents]:
-        if (cand / "bucket").is_dir() and (cand / "README.md").is_file():
-            return cand
+    for candidate in [base, *base.parents]:
+        if is_bucket_root(candidate):
+            return candidate
     raise SmError(
-        "bucket repo root not found (needs both bucket/ and README.md); "
-        "pass --repo, or run from inside the repo."
+        "bucket repo not found: no ancestor of the cwd holds both bucket/ and "
+        f"README.md, and {installed or SCOOP_ENV_VAR} is not such a directory. "
+        "Set the Scoop environment variable, pass --repo, or run from inside the repo."
     )
 
 
@@ -1322,6 +1367,8 @@ def is_dangerous_snippet(script: str) -> str | None:
             continue
         return label
     return None
+
+
 HTTP_ALLOW_HOSTS = ("mirror.ctan.org",)
 REQUIRED_FIELDS = [
     "version",
@@ -1796,9 +1843,7 @@ def lint_manifest_text(
         occurrences = len(re.findall(rf"\[{re.escape(name)}\]\(", readme_text))
         if occurrences == 0:
             documented = readme_app_names(readme_text)
-            cased = next(
-                (n for n in documented if n.lower() == name.lower()), None
-            )
+            cased = next((n for n in documented if n.lower() == name.lower()), None)
             close = difflib.get_close_matches(name, documented, n=1, cutoff=0.75)
             if cased is not None:
                 hint = (
@@ -1976,9 +2021,7 @@ def parse_summary(readme_text: str) -> list[SummaryTable]:
                     separator = _split_row(block[1])
                     widths = [len(cell) for cell in separator]
                     rows = [_split_row(row) for row in block[2:]]
-                    tables.append(
-                        SummaryTable(section, header, rows, widths, app_col)
-                    )
+                    tables.append(SummaryTable(section, header, rows, widths, app_col))
             continue
         index += 1
     return tables
@@ -2001,7 +2044,7 @@ def _heading_matches(line: str, section: str) -> bool:
     return re.sub(r"^#+\s*", "", line).strip() == section
 
 
-def _locate_summary_table(lines: list[str], section: str) -> tuple[int, int] | None:
+def _locate_summary_table(lines: Sequence[str], section: str) -> tuple[int, int] | None:
     """Return (header row, end row) of the summary table under a section heading.
 
     The table may be nested under further sub-headings, so the search descends

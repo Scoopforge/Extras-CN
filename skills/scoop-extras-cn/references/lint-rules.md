@@ -153,11 +153,13 @@ python scripts/scoop_manifest.py lint --json                 # machine-readable 
 python scripts/scoop_manifest.py lint --strict               # warnings fail too
 python scripts/scoop_manifest.py lint --fix-format           # formatting only
 python scripts/scoop_manifest.py lint --rules                # print the rule catalog
-python scripts/scoop_manifest.py lint --repo C:\Scoop\buckets\extras-cn
+python scripts/scoop_manifest.py lint --repo $env:Scoop/buckets/extras-cn
 ```
 
-`--repo` is accepted before or after the subcommand; from inside
-`C:\Scoop\buckets\extras-cn` it is not needed at all.
+`--repo` is accepted before or after the subcommand, but is rarely needed: the
+default target is `$env:Scoop/buckets/extras-cn`, the copy of this bucket Scoop
+has installed. The example above is PowerShell spelling of the very path the
+script already picks.
 
 ## Divergence from the Extras-Plus build
 

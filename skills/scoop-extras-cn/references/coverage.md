@@ -20,7 +20,7 @@ larger share of local apps than the upstream proportions would suggest.
 
 ## 1. Method
 
-- Corpus: `C:\Scoop\buckets\extras\bucket` — the upstream
+- Corpus: `$env:Scoop/buckets/extras/bucket` — the upstream
   `ScoopInstaller/Extras` bucket, **2389** `*.json` manifests, against the 88 in
   this repo.
 - Offline and read-only: every file is `json.loads`-ed and tallied with

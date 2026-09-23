@@ -1,9 +1,11 @@
-"""scoop-manifest skill CLI: three trigger commands -- generate / update / lint.
+"""scoop-extras-cn skill CLI: three trigger commands -- generate / update / lint.
 
     python scripts/scoop_manifest.py generate   # generate: build a manifest from a recipe and fill it in
     python scripts/scoop_manifest.py update     # update: edit fields / bump version / rehash / probe upstream
     python scripts/scoop_manifest.py lint       # lint: check bucket/ against this repo's CI standard
 
+The target is `$env:Scoop/buckets/extras-cn` unless `--repo` says otherwise, so the
+globally installed skill writes into the bucket Scoop itself reads, from any cwd.
 All three subcommands accept short aliases: gen, upd, check.
 """
 
@@ -50,6 +52,12 @@ def _key_value_pairs(items: list[str], flag: str) -> OrderedDict:
     return pairs
 
 
+REPO_HELP = (
+    "bucket repo root (default: $env:Scoop/buckets/extras-cn, else the "
+    "nearest ancestor holding bucket/ and README.md)"
+)
+
+
 def add_repo_argument(parser: argparse.ArgumentParser, main_parser=None) -> None:
     """Declare --repo so it works before *and* after the subcommand.
 
@@ -59,11 +67,14 @@ def add_repo_argument(parser: argparse.ArgumentParser, main_parser=None) -> None
     it in both places and merging the two values in repo_root_from keeps both
     spellings usable. The subcommand declares it with `default=argparse.SUPPRESS`
     so that omitting it does not overwrite an earlier top-level value with None.
+
+    The two spellings are separate calls rather than one `**kwargs` dict:
+    unpacking a dict into add_argument defeats its overloads, and ty rejects it.
     """
-    kwargs = {"help": "bucket repo root (walks upwards by default)"}
     if main_parser is not None:
-        kwargs["default"] = argparse.SUPPRESS
-    parser.add_argument("--repo", **kwargs)
+        parser.add_argument("--repo", default=argparse.SUPPRESS, help=REPO_HELP)
+    else:
+        parser.add_argument("--repo", help=REPO_HELP)
 
 
 def repo_root_from(args) -> Path:
@@ -803,7 +814,11 @@ def build_parser() -> argparse.ArgumentParser:
             "  lint:     python scripts/scoop_manifest.py lint --fix-format\n"
         ),
     )
-    parser.add_argument("--repo", help="bucket repo root (walks upwards by default)")
+    parser.add_argument(
+        "--repo",
+        help="bucket repo root (default: $env:Scoop/buckets/extras-cn, else the "
+        "nearest ancestor holding bucket/ and README.md)",
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
     # --- generate ---
