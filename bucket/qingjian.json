@@ -79,7 +79,7 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/qingjian-team/qingjian/releases",
-        "regex": "tag_name\\s*:\\s*\"(?<version>windows-v(?>[\\d.]+(?:-[\\w.-]+)?))\""
+        "regex": "qingjian-v([\\d.]+?)-windows-x86_64-setup.exe\""
     },
     "autoupdate": {
         "architecture": {
