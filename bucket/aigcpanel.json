@@ -27,15 +27,15 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repos/modstart-lib/aigcpanel/releases",
-        "regex": "tag_name\\s*:\\s*\"(?<version>AigcPanel-v(?>[\\d.]+(?:-[\\w.-]+)?))-win-\""
+        "regex": "/releases/download/v([\\d.]+)/AigcPanel-\\1-win-setup-x64\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/modstart-lib/aigcpanel/releases/download/v$version/AigcPanel-v$version-win-setup-x64.exe#/dl.7z"
+                "url": "https://github.com/modstart-lib/aigcpanel/releases/download/v$version/AigcPanel-$version-win-setup-x64.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://github.com/modstart-lib/aigcpanel/releases/download/v$version/AigcPanel-v$version-win-setup-arm64.exe#/dl.7z"
+                "url": "https://github.com/modstart-lib/aigcpanel/releases/download/v$version/AigcPanel-$version-win-setup-arm64.exe#/dl.7z"
             }
         }
     }
