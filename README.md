@@ -110,8 +110,8 @@ scoop config aria2-min-split-size 4M
 
 |   中文名称   |                          App                           | 自动更新 |  备注  |
 | :----------: | :----------------------------------------------------: | :------: | :----: |
-|  阿波波外语  |              [aboboo](http://aboboo.com)               |    ✓     | 精简版 |
-|  阿波波外语  |            [aboboo-full](http://aboboo.com)            |    ✓     | 完整版 |
+|  阿波波外语  |           [aboboo](https://www.aboboo.com/)            |    ✓     | 精简版 |
+|  阿波波外语  |         [aboboo-full](https://www.aboboo.com/)         |    ✓     | 完整版 |
 |   欧路词典   |               [eudic](https://eudic.net)               |    ✓     |        |
 |   德语助手   |    [dehelper](https://eudic.net/v4/es/app/dehelper)    |    ✓     |        |
 |   西语助手   |    [eshelper](https://eudic.net/v4/es/app/eshelper)    |    ✓     |        |
@@ -129,7 +129,7 @@ scoop config aria2-min-split-size 4M
 |  CAJViewer   |     [cajviewer](https://cajviewer.cnki.net/index.html)      |    ✓     | by @rayinfinite |
 |   FreeTex    |            [freetex](https://xdxsb.top/FreeTex)             |    ✓     |                 |
 | 全球学术快报 |           [cnkiexpress](https://express.cnki.net)           |    ✓     | by @rayinfinite |
-|   KingDraw   |               [kingdraw](http://kingdraw.cn)                |    ✓     |                 |
+|   KingDraw   |            [kingdraw](https://www.kingdraw.cn/)             |    ✓     |                 |
 |   QuickBib   | [QuickBib](https://archisman-panigrahi.github.io/QuickBib/) |    ✓     | by YanMing-lxb  |
 
 #### 软件开发
