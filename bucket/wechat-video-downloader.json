@@ -1,13 +1,13 @@
 {
-    "version": "2.8",
+    "version": "2.0.0",
     "description": "超方便的微信视频号下载器",
     "homepage": "https://github.com/lecepin/WeChatVideoDownloader",
     "license": "Unknown",
-    "url": "https://github.com/qiye45/wechatVideoDownload/releases/download/2.8/wechatVideoDownload2.8.zip#/dl.7z",
-    "hash": "cf8fe6e0144ef0791c02740f177b17913ad01ecf3ffeb36ea2ab297c56b06cec",
+    "url": "https://github.com/lecepin/WeChatVideoDownloader/releases/download/v2.0.0/WeChatVideoDownloader.Setup.2.0.0.exe#/dl.7z",
+    "hash": "6a62fa3051c1d33f46b4d8a5452eb585421f1bff8255bac43cfebfe5a587355a",
     "shortcuts": [
         [
-            "微信视频号下载工具2.8.exe",
+            "微信视频号下载工具2.0.0.exe",
             "微信视频号下载工具"
         ]
     ],
