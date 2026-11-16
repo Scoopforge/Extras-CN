@@ -108,19 +108,21 @@ scoop config aria2-min-split-size 4M
 
 #### 外语学习
 
-|   中文名称   |                          App                           | 自动更新 |  备注  |
-| :----------: | :----------------------------------------------------: | :------: | :----: |
-|  阿波波外语  |           [aboboo](https://www.aboboo.com/)            |    ✓     | 精简版 |
-|  阿波波外语  |         [aboboo-full](https://www.aboboo.com/)         |    ✓     | 完整版 |
-|   欧路词典   |               [eudic](https://eudic.net)               |    ✓     |        |
-|   德语助手   |    [dehelper](https://eudic.net/v4/es/app/dehelper)    |    ✓     |        |
-|   西语助手   |    [eshelper](https://eudic.net/v4/es/app/eshelper)    |    ✓     |        |
-|   法语助手   |    [frhelper](https://eudic.net/v4/fr/app/frhelper)    |    ✓     |        |
-| 每日英语听力 |         [ting-en](http://dict.eudic.net/ting)          |    ✓     |        |
-| 每日德语听力 |      [ting-de](https://eudic.net/v4/de/app/ting)       |    ✓     |        |
-| 每日西语听力 |      [ting-es](https://eudic.net/v4/es/app/ting)       |    ✓     |        |
-| 每日法语听力 |      [ting-fr](https://eudic.net/v4/fr/app/ting)       |    ✓     |        |
-|  DashPlayer  | [dashplayer](https://github.com/solidSpoon/DashPlayer) |    ✓     |        |
+|   中文名称    |                             App                              | 自动更新 |     备注     |
+| :-----------: | :----------------------------------------------------------: | :------: | :----------: |
+|  阿波波外语   |              [aboboo](https://www.aboboo.com/)               |    ✓     |    精简版    |
+|  阿波波外语   |            [aboboo-full](https://www.aboboo.com/)            |    ✓     |    完整版    |
+|   欧路词典    |                  [eudic](https://eudic.net)                  |    ✓     |              |
+|   德语助手    |       [dehelper](https://eudic.net/v4/de/app/dehelper)       |    ✓     |              |
+|   西语助手    |       [eshelper](https://eudic.net/v4/es/app/eshelper)       |    ✓     |              |
+|   法语助手    |       [frhelper](https://eudic.net/v4/fr/app/frhelper)       |    ✓     |              |
+| 每日英语听力  |            [ting-en](http://dict.eudic.net/ting)             |    ✓     |              |
+| 每日德语听力  |         [ting-de](https://eudic.net/v4/de/app/ting)          |    ✓     |              |
+| 每日西语听力  |         [ting-es](https://eudic.net/v4/es/app/ting)          |    ✓     |              |
+| 每日法语听力  |         [ting-fr](https://eudic.net/v4/fr/app/ting)          |    ✓     |              |
+|  DashPlayer   |    [dashplayer](https://github.com/solidSpoon/DashPlayer)    |    ✓     |              |
+| GoldenDict-NG | [goldendict-ng](https://github.com/xiaoyifang/goldendict-ng) |    ✓     |              |
+|  青简输入法   |              [qingjian](https://qingjian.app/)               |    ✓     | 候选词附译词 |
 
 #### 学术研究
 
@@ -130,51 +132,67 @@ scoop config aria2-min-split-size 4M
 |   FreeTex    |            [freetex](https://xdxsb.top/FreeTex)             |    ✓     |                 |
 | 全球学术快报 |           [cnkiexpress](https://express.cnki.net)           |    ✓     | by @rayinfinite |
 |   KingDraw   |            [kingdraw](https://www.kingdraw.cn/)             |    ✓     |                 |
-|   QuickBib   | [QuickBib](https://archisman-panigrahi.github.io/QuickBib/) |    ✓     | by YanMing-lxb  |
+|   QuickBib   | [quickbib](https://archisman-panigrahi.github.io/QuickBib/) |    ✓     | by YanMing-lxb  |
+|  RetainPDF   |     [retain-pdf](https://github.com/wxyhgk/retain-pdf)      |    ✓     |  保留排版翻译   |
 
 #### 软件开发
 
-|     中文名称      |                                            App                                            | 自动更新 | 备注  |
-| :---------------: | :---------------------------------------------------------------------------------------: | :------: | :---: |
-|   Cockpit-Tools   |                [cockpit-tools](https://github.com/jlcodes99/cockpit-tools)                |    ✓     |       |
-|   EasyEDA Agent   |               [easyeda](https://github.com/zhoushoujianwork/easyeda-agent)                |    ✓     |       |
-|     HBuilderX     |                       [hbuilderx](https://dcloud.io/hbuilderx.html)                       |    ✓     |       |
-| 嘉立创 EDA 标准版 |                                 [lceda](https://lceda.cn)                                 |    ✓     |       |
-| 嘉立创 EDA 专业版 |                               [lceda-pro](https://lceda.cn)                               |    ✓     |       |
-|  微信小程序 SDK   | [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html) |    ✓     |       |
+|      中文名称      |                                                 App                                                 | 自动更新 |      备注       |
+| :----------------: | :-------------------------------------------------------------------------------------------------: | :------: | :-------------: |
+|   EasyEDA Agent    |                    [easyeda](https://github.com/zhoushoujianwork/easyeda-agent)                     |    ✓     |                 |
+|     HBuilderX      |                            [hbuilderx](https://dcloud.io/hbuilderx.html)                            |    ✓     |                 |
+| 嘉立创 EDA 标准版  |                                      [lceda](https://lceda.cn)                                      |    ✓     |                 |
+| 嘉立创 EDA 专业版  |                                    [lceda-pro](https://lceda.cn)                                    |    ✓     |                 |
+|   微信小程序 SDK   |      [wechatdevtools](https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html)      |    ✓     |                 |
+|  DeepSeek Harness  |              [dsh-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop)               |    ✓     |  第三方桌面版   |
+|    FFmpegFreeUI    |            [ffmpegfreeui](https://github.com/Lake1059/FFmpegFreeUI/blob/main/README.md)             |    ✓     | FFmpeg 图形界面 |
+| VMware Workstation | [vmware-workstation-pro](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |    ✓     |                 |
 
 #### 日常使用
 
-|     中文名称     |                                 App                                  | 自动更新 |                         备注                         |
-| :--------------: | :------------------------------------------------------------------: | :------: | :--------------------------------------------------: |
-|     阿里云盘     |                     [adrive](https://alipan.com)                     |    ✓     |                                                      |
-|     AutoClip     |          [autoclip](https://github.com/zhouxiaoka/autoclip)          |    ✓     |                                                      |
-|     百度云盘     |            [baidunetdisk](https://pan.baidu.com/download)            |    ✓     |                   推荐 WinGet 安装                   |
-|       钉钉       |                   [dingtalk](https://dingtalk.com)                   |    ✓     |                                                      |
-|       抖音       |                     [douyin](https://douyin.com)                     |    ✓     |                                                      |
-|     Edgeless     |                [edgeless](https://home.edgeless.top)                 |    ✓     |                   by @IsaacWangTT                    |
-|     亿图图示     |                   [edrawmax](https://edrawsoft.cn)                   |    ✓     |                                                      |
-|       飞书       |                     [feishu](https://feishu.cn)                      |    ✓     |                                                      |
-|     EV 录屏      |             [evcapture](https://ieway.cn/evcapture.html)             |    ✓     |                                                      |
-|       剪映       |                  [jianying-pro](https://capcut.cn)                   |    ✓     |                                                      |
-|     爱思助手     |                 [i4tools](https://i4.cn/pro_pc.html)                 |    ✓     |                                                      |
-|   洛雪音乐助手   |       [lx-music](https://github.com/lyswhut/lx-music-desktop)        |    ✓     |                                                      |
-|    网易云音乐    |                [neteasemusic](https://music.163.com)                 |    ✓     |                                                      |
-|     腾讯会议     |            [tencent-meeting](https://meeting.tencent.com)            |    ✓     |                    by @Ryanjiena                     |
-|     夸克网盘     |               [quarkclouddrive](https://pan.quark.cn)                |    ✓     |                                                      |
-|       TIM        |                      [tim](https://tim.qq.com)                       |    ✓     |                                                      |
-|     QQ 音乐      |                    [qqmusic](hhttps://y.qq.com/)                     |    ✓     |                                                      |
-|      uTools      |                      [utools](https://u.tools)                       |    ✓     |                                                      |
-|      小狼毫      |                      [weasel](https://rime.im)                       |    ✓     |                                                      |
-|    WPSOffice     |               [wpsoffice-cn](https://wps.com/zh-hant)                |    ✓     |                                                      |
-|       语雀       |                      [yuque](https://yuque.com)                      |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
-| 微信视频号下载器 | [wx-channel-download](https://github.com/ltaoo/wx_channels_download) |    ✓     |                                                      |
-|    AIGCPanel     |                  [aigcpanel](https://aigcpanel.com)                  |    ✓     |                                                      |
-|   BaiduPCS-Go    |        [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)        |    ✓     |                                                      |
-|     Clash-MI     |                   [clash-mi](https://clashmi.app/)                   |    ✓     |                                                      |
-|     eSearch      |          [esearch](https://github.com/xushengfeng/eSearch)           |    ✓     |                                                      |
-|      WeGame      |                 [wegame](https://www.wegame.com.cn)                  |    ✓     |                                                      |
-| M3u8-Downloader  |   [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader)   |    ✓     |                                                      |
+|     中文名称      |                                  App                                   | 自动更新 |                         备注                         |
+| :---------------: | :--------------------------------------------------------------------: | :------: | :--------------------------------------------------: |
+|     阿里云盘      |                      [adrive](https://alipan.com)                      |    ✓     |                                                      |
+|     AutoClip      |           [autoclip](https://github.com/zhouxiaoka/autoclip)           |    ✓     |                                                      |
+|     百度云盘      |             [baidunetdisk](https://pan.baidu.com/download)             |    ✓     |                   推荐 WinGet 安装                   |
+|       抖音        |                      [douyin](https://douyin.com)                      |    ✓     |                                                      |
+|     Edgeless      |                 [edgeless](https://home.edgeless.top)                  |    ✓     |                   by @IsaacWangTT                    |
+|     亿图图示      |                    [edrawmax](https://edrawsoft.cn)                    |    ✓     |                                                      |
+|       飞书        |                      [feishu](https://feishu.cn)                       |    ✓     |                                                      |
+|      EV 录屏      |              [evcapture](https://ieway.cn/evcapture.html)              |    ✓     |                                                      |
+|       剪映        |                   [jianying-pro](https://capcut.cn)                    |    ✓     |                                                      |
+|     爱思助手      |                  [i4tools](https://i4.cn/pro_pc.html)                  |    ✓     |                                                      |
+|   洛雪音乐助手    |        [lx-music](https://github.com/lyswhut/lx-music-desktop)         |    ✓     |                                                      |
+|    网易云音乐     |                 [neteasemusic](https://music.163.com)                  |    ✓     |                                                      |
+|     腾讯会议      |             [tencent-meeting](https://meeting.tencent.com)             |    ✓     |                    by @Ryanjiena                     |
+|     夸克网盘      |                [quarkclouddrive](https://pan.quark.cn)                 |    ✓     |                                                      |
+|        TIM        |                       [tim](https://tim.qq.com)                        |    ✓     |                                                      |
+|      QQ 音乐      |                      [qqmusic](https://y.qq.com/)                      |    ✓     |                                                      |
+|      uTools       |                       [utools](https://u.tools)                        |    ✓     |                                                      |
+|      小狼毫       |                       [weasel](https://rime.im)                        |    ✓     |                                                      |
+|     WPSOffice     |                [wpsoffice-cn](https://wps.com/zh-hant)                 |    ✓     |                                                      |
+|       语雀        |                       [yuque](https://yuque.com)                       |    ✓     | 复制于 [dorado](https://github.com/chawyehsu/dorado) |
+| 微信视频号下载器  | [wx-channels-download](https://github.com/ltaoo/wx_channels_download)  |    ✓     |                                                      |
+|     AIGCPanel     |                   [aigcpanel](https://aigcpanel.com)                   |    ✓     |                                                      |
+|    BaiduPCS-Go    |         [baidupcs-go](https://github.com/qjfoidnh/BaiduPCS-Go)         |    ✓     |                                                      |
+|     Clash-MI      |                    [clash-mi](https://clashmi.app/)                    |    ✓     |                                                      |
+|      eSearch      |           [esearch](https://github.com/xushengfeng/eSearch)            |    ✓     |                                                      |
+|      WeGame       |                  [wegame](https://www.wegame.com.cn)                   |    ✓     |                                                      |
+|  M3u8-Downloader  |    [m3u8-downloader](https://github.com/HeiSir2014/M3U8-Downloader)    |    ✓     |                                                      |
+|      AiNiee       |             [ainiee](https://github.com/NEKOparapa/AiNiee)             |    ✓     |                    AI 长文本翻译                     |
+|      AutoGLM      |           [autotyper](https://autoglm.zhipuai.cn/autotyper/)           |    ✓     |                     AI 语音输入                      |
+|     亿图图示      |        [edrawmax8](https://edrawsoft.cn/download-edrawmax.html)        |    ✓     |                     8.x 历史版本                     |
+|     EV 播放器     |               [evplayer](https://ieway.cn/evplayer.html)               |    ✓     |                                                      |
+|     FeelUOwn      |              [feeluown](http://feeluown.readthedocs.io/)               |    ✓     |                                                      |
+|  LocalMiniDrama   |                 [local-mini-drama](https://83zi.com/)                  |    ✓     |                   本地 AI 短剧生成                   |
+| MoneyPrinterTurbo | [money-printer-turbo](https://github.com/harry0703/MoneyPrinterTurbo/) |    ✓     |                    AI 短视频生成                     |
+|      PixPin       |                      [pixpin](https://pixpin.cn/)                      |    ✓     |                    截图/录屏/OCR                     |
+|     千问办公      |                  [qwenwork-cn](https://qwenwork.cn/)                   |    ✓     |                                                      |
+|   TTS-Vue-Next    |          [tts-vue-next](https://tts-doc.loker.vip/home.html)           |    ✓     |                     微软语音合成                     |
+|    网易UU远程     |                   [uu-remote](https://uuyc.163.com)                    |    ✓     |                                                      |
+|  VideoCaptioner   |    [videocaptioner](https://github.com/WEIFENG2333/VideoCaptioner)     |    ✓     |                       LLM 字幕                       |
+| 微信视频号下载器  |    [wechat-video-downloader](https://changfengbox.top/wechatVideo)     |    ✓     |                       长风盒子                       |
+|  视频号下载助手   |               [wx-channel](https://code.dongzuren.com/)                |    ✓     |                      dongzuren                       |
 
 ### Win 专属
 
@@ -194,22 +212,22 @@ scoop config aria2-min-split-size 4M
 
 |           App           | 自动更新 |
 | :---------------------: | :------: |
-|       Blender-cn        |    ✓     |
-|       DBeaver-cn        |    ✓     |
-|       Inkscape-cn       |    ✓     |
-|        Julia-cn         |    ✓     |
-|        KiCAD-cn         |    ✓     |
-|     LibreOffice-cn      |    ✓     |
-|         LyX-cn          |    ✓     |
-|      Miniforge-cn       |    ✓     |
-|        Mogan-cn         |    ✓     |
-|        MSYS2-cn         |    ✓     |
-| Navicat-Premium-Lite-cn |    ✓     |
-|      OBS-Studio-cn      |    ✓     |
-|        Octave-cn        |    ✓     |
-|      Qt-Creator-cn      |    ✓     |
-|      TeXStudio-cn       |    ✓     |
-|         VLC-cn          |    ✓     |
+|       blender-cn        |    ✓     |
+|       dbeaver-cn        |    ✓     |
+|       inkscape-cn       |    ✓     |
+|        julia-cn         |    ✓     |
+|        kicad-cn         |    ✓     |
+|     libreoffice-cn      |    ✓     |
+|         lyx-cn          |    ✓     |
+|      miniforge-cn       |    ✓     |
+|        mogan-cn         |    ✓     |
+|        msys2-cn         |    ✓     |
+| navicat-premium-lite-cn |    ✓     |
+|      obs-studio-cn      |    ✓     |
+|        octave-cn        |    ✓     |
+|      qt-creator-cn      |    ✓     |
+|      texstudio-cn       |    ✓     |
+|         vlc-cn          |    ✓     |
 
 ## 备注
 
