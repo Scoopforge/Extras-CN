@@ -5,13 +5,13 @@
 [![code size](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/languages/code-size/Scoopforge/Extras-CN.svg)
 [![repo size](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)](https://img.shields.io/github/repo-size/Scoopforge/Extras-CN.svg)
 
-> 👉 本组织致力于推动 Scoop 社区繁荣发展，提供高效审核，鼓励更多人参与。任何提交过1次有效PR（被合并）的贡献者均可@ivaquero 成为仓库管理员。
+> 👉 本组织致力于推动 Scoop 社区繁荣发展，提供高效审核，鼓励更多人参与。任何提交过1次有效PR（被合并）的贡献者均可@ivaquero 成为仓库管理员。 <!-- rumdl-disable-line line-length -->
 
 本仓库为专注于服务国人的 Windows 最佳包管理器 [Scoop](https://github.com/ScoopInstaller/Scoop)扩展库。
 
 > ⚠️ 为更好的进行管理，本仓库只收录主要针对国内用户的软件，国际通用软件请添加仓库[Extras-Plus](https://github.com/Scoopforge/Extras-Plus)。
 >
-> ⚠️ For a better management, this repo now only contains manifests of softwares for Chinese users, for international softwares, please add the bucket [Extras-Plus](https://github.com/Scoopforge/Extras-Plus).
+> ⚠️ For a better management, this repo now only contains manifests of softwares for Chinese users, for international softwares, please add the bucket [Extras-Plus](https://github.com/Scoopforge/Extras-Plus). <!-- rumdl-disable-line line-length -->
 
 ## 🏃 开始
 
@@ -34,7 +34,7 @@ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 ```powershell
 irm get.scoop.sh -outfile 'install.ps1'
 .\install.ps1 -ScoopDir ['Scoop_Path'] -ScoopGlobalDir ['GlobalScoopApps_Path'] -NoProxy
-# 例如
+# 如
 .\install.ps1 -ScoopDir 'C:\Scoop' -ScoopGlobalDir 'C:\Program Files' -NoProxy
 ```
 
@@ -108,21 +108,20 @@ scoop config aria2-min-split-size 4M
 
 #### 外语学习
 
-|   中文名称    |                             App                              | 自动更新 |     备注     |
-| :-----------: | :----------------------------------------------------------: | :------: | :----------: |
-|  阿波波外语   |              [aboboo](https://www.aboboo.com/)               |    ✓     |    精简版    |
-|  阿波波外语   |            [aboboo-full](https://www.aboboo.com/)            |    ✓     |    完整版    |
-|   欧路词典    |                  [eudic](https://eudic.net)                  |    ✓     |              |
-|   德语助手    |       [dehelper](https://eudic.net/v4/de/app/dehelper)       |    ✓     |              |
-|   西语助手    |       [eshelper](https://eudic.net/v4/es/app/eshelper)       |    ✓     |              |
-|   法语助手    |       [frhelper](https://eudic.net/v4/fr/app/frhelper)       |    ✓     |              |
-| 每日英语听力  |            [ting-en](http://dict.eudic.net/ting)             |    ✓     |              |
-| 每日德语听力  |         [ting-de](https://eudic.net/v4/de/app/ting)          |    ✓     |              |
-| 每日西语听力  |         [ting-es](https://eudic.net/v4/es/app/ting)          |    ✓     |              |
-| 每日法语听力  |         [ting-fr](https://eudic.net/v4/fr/app/ting)          |    ✓     |              |
-|  DashPlayer   |    [dashplayer](https://github.com/solidSpoon/DashPlayer)    |    ✓     |              |
-| GoldenDict-NG | [goldendict-ng](https://github.com/xiaoyifang/goldendict-ng) |    ✓     |              |
-|  青简输入法   |              [qingjian](https://qingjian.app/)               |    ✓     | 候选词附译词 |
+|   中文名称    |                             App                              | 自动更新 |  备注  |
+| :-----------: | :----------------------------------------------------------: | :------: | :----: |
+|  阿波波外语   |              [aboboo](https://www.aboboo.com/)               |    ✓     | 精简版 |
+|  阿波波外语   |            [aboboo-full](https://www.aboboo.com/)            |    ✓     | 完整版 |
+|   欧路词典    |                  [eudic](https://eudic.net)                  |    ✓     |        |
+|   德语助手    |       [dehelper](https://eudic.net/v4/de/app/dehelper)       |    ✓     |        |
+|   西语助手    |       [eshelper](https://eudic.net/v4/es/app/eshelper)       |    ✓     |        |
+|   法语助手    |       [frhelper](https://eudic.net/v4/fr/app/frhelper)       |    ✓     |        |
+| 每日英语听力  |            [ting-en](http://dict.eudic.net/ting)             |    ✓     |        |
+| 每日德语听力  |         [ting-de](https://eudic.net/v4/de/app/ting)          |    ✓     |        |
+| 每日西语听力  |         [ting-es](https://eudic.net/v4/es/app/ting)          |    ✓     |        |
+| 每日法语听力  |         [ting-fr](https://eudic.net/v4/fr/app/ting)          |    ✓     |        |
+|  DashPlayer   |    [dashplayer](https://github.com/solidSpoon/DashPlayer)    |    ✓     |        |
+| GoldenDict-NG | [goldendict-ng](https://github.com/xiaoyifang/goldendict-ng) |    ✓     |        |
 
 #### 学术研究
 
@@ -231,7 +230,7 @@ scoop config aria2-min-split-size 4M
 
 ## 备注
 
-由于 Win 到权限管理复杂，对于一些常见的不提供 portable 安装包，且需要管理员应用的权限，建议使用 WinGet 进行安装
+由于 Win 到权限管理复杂，对于一些常见的不提供 portable 安装包，且需要管理员应用的权限，建议使用 WinGet 进行安装 <!-- rumdl-disable-line line-length -->
 
 ```powershell
 scoop install winget
